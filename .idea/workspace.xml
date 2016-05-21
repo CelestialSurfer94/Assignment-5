@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="337c26b0-7527-4762-8d4b-ce58b705ae05" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Edge.java" afterPath="$PROJECT_DIR$/Edge.java" />
-    </list>
+    <list default="true" id="337c26b0-7527-4762-8d4b-ce58b705ae05" name="Default" comment="" />
     <ignored path="Assignment 5 373.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -281,12 +278,12 @@
       <workItem from="1463437758317" duration="47000" />
       <workItem from="1463858644802" duration="1833000" />
       <workItem from="1463862319702" duration="25000" />
-      <workItem from="1463862801346" duration="230000" />
+      <workItem from="1463862801346" duration="268000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2368000" />
+    <option name="totallyTimeSpent" value="2406000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1790" extended-state="6" />

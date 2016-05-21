@@ -15,7 +15,7 @@ public class MyGraph implements Graph {
 	 * @param e a collection of the edges in this graph
 	 */
 	public MyGraph(Collection<Vertex> vertexes, Collection<Edge> edges) {
-		Set<Edge>[] adjList = new Set<Edge>[HASH_CONST];
+		adjList = new Set<Edge>[HASH_CONST];
 		for (Vertex v : vertexes) { // Add each vertex to the adjacency list
 			adjList[v.hashCode()] = new HashSet<Edge>();
 		}

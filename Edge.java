@@ -2,8 +2,7 @@
  * Representation of a directed graph edge.
  */
 
-// TEST PUSH PLEASE IGNORE
-	// TEST2
+// TEST2 PUSH 
 public class Edge {
 	private final Vertex from,to;
 	private final int w;

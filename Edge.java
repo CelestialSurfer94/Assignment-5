@@ -12,7 +12,7 @@ public class Edge {
 	 * @param w weight of this edge
 	 */
 
-    //TESTING TESTING 
+    //TESTING TESTING TESTING
 	public Edge(Vertex from, Vertex to, int w) {
 		if(from == null || to == null)
 			throw new IllegalArgumentException("null");

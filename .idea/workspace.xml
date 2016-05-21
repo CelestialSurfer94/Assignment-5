@@ -28,7 +28,7 @@
         <entry file="file://$PROJECT_DIR$/Edge.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="462">
-              <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -279,12 +279,12 @@
       <workItem from="1463437673845" duration="24000" />
       <workItem from="1463437758317" duration="47000" />
       <workItem from="1463858644802" duration="566000" />
-      <workItem from="1463861270299" duration="41000" />
+      <workItem from="1463861270299" duration="651000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="887000" />
+    <option name="totallyTimeSpent" value="1497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1790" extended-state="6" />
@@ -591,7 +591,7 @@
     <entry file="file://$PROJECT_DIR$/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding />
         </state>
       </provider>

@@ -1,11 +1,17 @@
 /**
  * Representation of a directed graph edge.
  */
+<<<<<<< HEAD
 
 // this is the kalvin branch.
 public class Edge {
 	private final Vertex from,to;
 	private final int weight;
+=======
+public class Edge {
+	private final Vertex from,to;
+	private final int w;
+>>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
 
 	/**
 	 * Construct a new edge
@@ -14,12 +20,21 @@ public class Edge {
 	 * @param w weight of this edge
 	 */
 
+<<<<<<< HEAD
 	public Edge(Vertex from, Vertex to, int weight) {
+=======
+    //TESTING TESTING TESTING
+	public Edge(Vertex from, Vertex to, int w) {
+>>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
 		if(from == null || to == null)
 			throw new IllegalArgumentException("null");
 		this.from = from;
 		this.to = to;
+<<<<<<< HEAD
 		this.weight = weight;
+=======
+		this.w = w;
+>>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
 	}
 
 	/**
@@ -43,7 +58,11 @@ public class Edge {
 	 * @return the weight of the edge
 	 */
 	public int getWeight() {
+<<<<<<< HEAD
 		return weight;
+=======
+		return w;
+>>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
 	}
 
 	/**
@@ -51,7 +70,11 @@ public class Edge {
 	 * @return A string of the form <from, to, weight>
 	 */
 	public String toString() {
+<<<<<<< HEAD
 		return "<"+from+", "+to+", "+weight+">";
+=======
+		return "<"+from+", "+to+", "+w+">";
+>>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
 	}
 
 	//auto-generated: hashes on all fields
@@ -60,7 +83,11 @@ public class Edge {
 		int result = 1;
 		result = prime * result + ((from == null) ? 0 : from.hashCode());
 		result = prime * result + ((to == null) ? 0 : to.hashCode());
+<<<<<<< HEAD
 		result = prime * result + weight;
+=======
+		result = prime * result + w;
+>>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
 		return result;
 	}
 
@@ -83,6 +110,10 @@ public class Edge {
 				return false;
 		} else if (!to.equals(other.to))
 			return false;
+<<<<<<< HEAD
 		return weight==other.weight;
+=======
+		return w==other.w;
+>>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
 	}
 }

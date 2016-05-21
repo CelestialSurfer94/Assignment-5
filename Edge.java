@@ -1,24 +1,22 @@
 /**
  * Representation of a directed graph edge.
  */
-
-// TEST2 PUSH 
 public class Edge {
 	private final Vertex from,to;
-	private final int w;
+	private final int weight;
 
 	/**
 	 * Construct a new edge
 	 * @param from start vertex
 	 * @param to end vertex
-	 * @param w weight of this edge
+	 * @param weight weight of this edge
 	 */
-	public Edge(Vertex from, Vertex to, int w) {
+	public Edge(Vertex from, Vertex to, int weight) {
 		if(from == null || to == null)
 			throw new IllegalArgumentException("null");
 		this.from = from;
 		this.to = to;
-		this.w = w;
+		this.weight = weight;
 	}
 
 	/**
@@ -42,7 +40,7 @@ public class Edge {
 	 * @return the weight of the edge
 	 */
 	public int getWeight() {
-		return w;
+		return weight;
 	}
 
 	/**
@@ -50,7 +48,7 @@ public class Edge {
 	 * @return A string of the form <from, to, weight>
 	 */
 	public String toString() {
-		return "<"+from+", "+to+", "+w+">";
+		return "<"+from+", "+to+", "+weight+">";
 	}
 
 	//auto-generated: hashes on all fields
@@ -59,7 +57,7 @@ public class Edge {
 		int result = 1;
 		result = prime * result + ((from == null) ? 0 : from.hashCode());
 		result = prime * result + ((to == null) ? 0 : to.hashCode());
-		result = prime * result + w;
+		result = prime * result + weight;
 		return result;
 	}
 
@@ -82,6 +80,6 @@ public class Edge {
 				return false;
 		} else if (!to.equals(other.to))
 			return false;
-		return w==other.w;
+		return weight==other.weight;
 	}
 }

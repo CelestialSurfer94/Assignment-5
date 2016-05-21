@@ -5,13 +5,8 @@ import java.util.*;
  * Assumes that we do not have negative cost edges in the graph.
  */
 public class MyGraph implements Graph {
-	private static final int HASH_CONST = 4973;
-	private Edge[] hashTable;
-	private Map<Vertex, Set<Edge>> pairings;
-	// you will need some private fields to represent the graph
-	// you are also likely to want some private helper methods
-
-	//TODO YOUR CODE HERE
+	private static final int HASH_CONST = 4973; // Size of adj list
+	private Set<Edge>[] adjList;
 
 	/**
 	 * Creates a MyGraph object with the given collection of vertices
@@ -19,27 +14,30 @@ public class MyGraph implements Graph {
 	 * @param v a collection of the vertices in this graph
 	 * @param e a collection of the edges in this graph
 	 */
-	public MyGraph(Collection<Vertex> v, Collection<Edge> e) {
-		pairings = new HashMap<Vertex, Set<Edge>>();
-		for (Vertex vert : v) {
-			pairings.put(v, null);
+	public MyGraph(Collection<Vertex> vertexes, Collection<Edge> edges) {
+		Set<Edge>[] adjList = new Set<Edge>[HASH_CONST];
+		for (Vertex v : vertexes) { // Add each vertex to the adjacency list
+			adjList[v.hashCode()] = new HashSet<Edge>();
 		}
-		hashTable = new Edge[HASH_CONST];
-		for (Edge edg : e) {
-			boolean duplicateWithWrongWeight = pairings.containsKey(edg.from) &&
-					pairings.get(edg.from).contains(edg);
-			if ((!pairings.containsKey(edg.from) || !pairings.containsKey(edg.to))
-					|| (edg.weight < 0) || ) {
+		for (Edge e : edges) {
+			int fromVertex = e.from.hashCode();
+			int toVertex = e.to.hashCode();
+
+			// Ensure each edge contains only valid vertexes
+			if (adjList[fromVertex] == null || adjList[toVertex] == null || e.weight < 0) {
 				throw new IllegalOperationException();
 			}
-			hashTable[edg.hashCode()] = edg;
-			Vertex vert = e.from;
-			if (pairings.get(vert) == null) {
-				pairings.get(vert) = new HashSet<Edge>();
-			}
-			pairings.get(vert).add(edg);
-		}
 
+			// Ensure a given vertex has no edge weight conflicts
+			for (edge j : adjList[fromVertex]) {
+				if (j.to.equals(e.to) && j.to.weight != e.weight) {
+					throw new IllegalOperationException("Edge with different weight exists");
+				}
+			}
+
+			// Edge is valid; add to list.
+			adjList[fromVertex].add(e);
+		}
 	}
 
 	/** 

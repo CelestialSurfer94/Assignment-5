@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="337c26b0-7527-4762-8d4b-ce58b705ae05" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Edge.java" afterPath="$PROJECT_DIR$/Edge.java" />
-    </list>
+    <list default="true" id="337c26b0-7527-4762-8d4b-ce58b705ae05" name="Default" comment="" />
     <ignored path="Assignment 5 373.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -279,15 +277,15 @@
       <workItem from="1463437673845" duration="24000" />
       <workItem from="1463437758317" duration="47000" />
       <workItem from="1463858644802" duration="566000" />
-      <workItem from="1463861270299" duration="651000" />
+      <workItem from="1463861270299" duration="852000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1497000" />
+    <option name="totallyTimeSpent" value="1698000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="2762" height="1790" extended-state="6" />
+    <frame x="-13" y="-13" width="2762" height="1790" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />

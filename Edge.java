@@ -1,6 +1,8 @@
 /**
  * Representation of a directed graph edge.
  */
+
+//the wutang clan aint nothin to f with.
 public class Edge {
 	private final Vertex from,to;
 	private final int w;

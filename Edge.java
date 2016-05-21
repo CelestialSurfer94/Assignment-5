@@ -2,12 +2,17 @@
  * Representation of a directed graph edge.
  */
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 // this is the kalvin branch.
 public class Edge {
 	private final Vertex from,to;
 	private final int weight;
 =======
+=======
+
+//this is the master.
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
 public class Edge {
 	private final Vertex from,to;
 	private final int w;

@@ -38,6 +38,7 @@
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="503">
               <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
               <folding>
@@ -60,6 +61,11 @@
               <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
               <folding />
 >>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+=======
+            <state relative-caret-position="396">
+              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <folding />
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
             </state>
           </provider>
         </entry>
@@ -69,6 +75,7 @@
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="2541">
 =======
             <state relative-caret-position="1925">
@@ -76,6 +83,9 @@
 =======
             <state relative-caret-position="2574">
 >>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+=======
+            <state relative-caret-position="2574">
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
               <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
               <folding />
             </state>
@@ -172,6 +182,7 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
@@ -181,6 +192,8 @@
 >>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
 =======
 >>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+=======
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -196,9 +209,12 @@
         <option value="$PROJECT_DIR$/Path.java" />
         <option value="$PROJECT_DIR$/Edge.java" />
 <<<<<<< HEAD
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/MyGraph.java" />
 =======
 >>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+=======
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
       </list>
     </option>
   </component>
@@ -221,7 +237,7 @@
     <option name="height" value="1790" />
 >>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -247,6 +263,7 @@
     </navigator>
     <panes>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <pane id="Scratches" />
 <<<<<<< HEAD
 =======
@@ -269,6 +286,8 @@
 >>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
       </pane>
 =======
+=======
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
       <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
@@ -292,7 +311,10 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+<<<<<<< HEAD
 >>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+=======
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -753,6 +775,7 @@
       <workItem from="1463370509954" duration="209000" />
       <workItem from="1463437673845" duration="24000" />
       <workItem from="1463437758317" duration="47000" />
+<<<<<<< HEAD
       <workItem from="1463858644802" duration="566000" />
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -766,10 +789,16 @@
       <workItem from="1463861270299" duration="852000" />
       <workItem from="1463862401241" duration="325000" />
 >>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+=======
+      <workItem from="1463858644802" duration="1833000" />
+      <workItem from="1463862319702" duration="25000" />
+      <workItem from="1463862801346" duration="268000" />
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <option name="totallyTimeSpent" value="6091000" />
@@ -782,6 +811,12 @@
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1849" height="1102" extended-state="6" />
 >>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
+=======
+    <option name="totallyTimeSpent" value="2406000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-13" y="-13" width="2762" height="1790" extended-state="6" />
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
     <editor active="true" />
 =======
     <option name="totallyTimeSpent" value="2023000" />
@@ -795,7 +830,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
 <<<<<<< HEAD
@@ -864,6 +899,7 @@
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
@@ -875,7 +911,111 @@
             <element signature="e#896#897#0" expanded="true" />
             <element signature="e#1030#1031#0" expanded="true" />
             <element signature="e#1076#1077#0" expanded="true" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindPaths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2574">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FindPaths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2574">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MyGraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1254">
+          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2541">
+          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1194,6 +1334,7 @@
           <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <folding>
             <element signature="e#597#598#0" expanded="true" />
             <element signature="e#615#616#0" expanded="true" />
@@ -1210,6 +1351,9 @@
 =======
           <folding />
 >>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+=======
+          <folding />
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
         </state>
       </provider>
     </entry>
@@ -1268,6 +1412,7 @@
           <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
           <folding>
             <element signature="e#597#598#0" expanded="true" />
             <element signature="e#615#616#0" expanded="true" />
@@ -1284,6 +1429,9 @@
 =======
           <folding />
 >>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+=======
+          <folding />
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
         </state>
       </provider>
     </entry>
@@ -1352,6 +1500,7 @@
     </entry>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/Path.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1405,6 +1554,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Path.java">
+=======
+    <entry file="file://$PROJECT_DIR$/MyGraph.java">
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
         <state relative-caret-position="50">
@@ -1431,7 +1583,21 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/MyGraph.java">
+=======
+    <entry file="file://$PROJECT_DIR$/FindPaths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2574">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Graph.java">
+>>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="573">
           <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
@@ -1483,6 +1649,14 @@
           <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding />
 >>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>

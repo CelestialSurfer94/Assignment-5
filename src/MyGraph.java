@@ -52,8 +52,7 @@ public class MyGraph implements Graph {
      * @return the vertices as a collection (which is anything iterable)
      */
     public Collection<Vertex> vertices() {
-        //TODO YOUR CODE HERE
-        return null;
+        return adjList.keySet();
     }
 
     /**
@@ -61,7 +60,6 @@ public class MyGraph implements Graph {
      * @return the edges as a collection (which is anything iterable)
      */
     public Collection<Edge> edges() {
-        //TODO YOUR CODE HERE
         return null;
     }
 
@@ -73,10 +71,21 @@ public class MyGraph implements Graph {
      * @return an iterable collection of vertices adjacent to v in the graph
      * @throws IllegalArgumentException if v does not exist.
      */
-    public Collection<Vertex> adjacentVertices(Vertex v) {
+    public Collection<Vertex> adjacentVertices(Vertex v) { //potential problem here. What about edges coming back into a node?
+        if(vertices[v.hashCode()] == null){
+            throw new IllegalArgumentException();
+        }
+        Set adjVert = new HashSet<>();
+        Iterator<Edge> itr = adjList.get(v).iterator(); //set of edges for vertex v.
+        while(itr.hasNext()){
+            Edge curEdge = itr.next();
+            adjVert.add(curEdge.getDestination()); // adds the destination nodes from vertex v, through current edge.
+        }
+        return adjVert;
+    }
 
-        //TODO YOUR CODE HERE
-        return null;
+    public Set<Edge> vertexEdges(Vertex a){ //returns the set of edges for a given vertex.
+        return adjList.get(a);
     }
 
     /**
@@ -89,9 +98,18 @@ public class MyGraph implements Graph {
      * @throws IllegalArgumentException if a or b do not exist.
      */
     public int edgeCost(Vertex a, Vertex b) {
-
-        //TODO YOUR CODE HERE
-        return 0;
+        if(vertices[a.hashCode()] == null || vertices[b.hashCode()] == null){ // the vertices do not exist.
+            throw new IllegalArgumentException("Vertices must be in the graph.");
+        }
+        Set<Edge> edges = vertexEdges(a); //all of the edges for the vertex.
+        Iterator<Edge> itr = edges.iterator();
+        while(itr.hasNext()){
+            Edge curEdge = itr.next();
+            if(curEdge.getDestination() == b){ //if the destination is equal to b, found the correct edge return weight.
+                return curEdge.getWeight();
+            }
+        }
+        return -1; //edge from a to b does not exist.
     }
 
     /**

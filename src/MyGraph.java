@@ -6,37 +6,44 @@ import java.util.*;
  */
 public class MyGraph implements Graph {
     private static final int HASH_CONST = 4973; // Size of adj list
-    private Set<Edge>[] adjList;
+    private Vertex[] vertices;
+    private Map<Vertex, Set<Edge>> adjList;
 
-    /**
-     * Creates a MyGraph object with the given collection of vertices
-     * and the given collection of edges.
-     * @param v a collection of the vertices in this graph
-     * @param e a collection of the edges in this graph
-     */
+
     public MyGraph(Collection<Vertex> vertexes, Collection<Edge> edges) {
-        Set<Edge>[] adjList = new Set<Edge>[HASH_CONST];
-        for (Vertex v : vertexes) { // Add each vertex to the adjacency list
-            adjList[v.hashCode()] = new HashSet<Edge>();
+        Iterator<Vertex> vertexIterator = vertexes.iterator();
+        while(vertexIterator.hasNext()) { // iterates through vertices, adds each vertex to hashTable
+            Vertex curVertex = vertexIterator.next();
+            vertices[curVertex.hashCode()] = curVertex; //***have to leave local variable here.***
         }
-        for (Edge e : edges) {
-            int fromVertex = e.from.hashCode();
-            int toVertex = e.to.hashCode();
 
-            // Ensure each edge contains only valid vertexes
-            if (adjList[fromVertex] == null || adjList[toVertex] == null || e.weight < 0) {
-                throw new IllegalOperationException();
+        Iterator<Edge> edgeIterator = edges.iterator();
+        while(edgeIterator.hasNext()){  //iterates through and adds valid edges to the adjacency list.
+            Edge curEdge = edgeIterator.next();
+            int sourceVal  = curEdge.getSource().hashCode(); // hashcode of the source vertex we are looking at.
+            int destinationVal = curEdge.getDestination().hashCode();//hashCode of the dest. val.
+            if (curEdge.getWeight() < 0 ||vertices[sourceVal] == null //checks weights, and whether the vertex exists.
+                    || vertices[destinationVal] == null){
+                throw new IllegalStateException("Weight must be >= 0 and vertices must exist in graph.");
             }
 
-            // Ensure a given vertex has no edge weight conflicts
-            for (edge j : adjList[fromVertex]) {
-                if (j.to.equals(e.to) && j.to.weight != e.weight) {
-                    throw new IllegalOperationException("Edge with different weight exists");
+            if(adjList.get(vertices[sourceVal]) == null){ // source vertex needs new set.
+                adjList.put(curEdge.getSource(),new HashSet<Edge>()); //initializes the set for source vertex.
+            }
+            if(adjList.get(vertices[destinationVal]) ==  null){ //dest. vertex needs new set.
+                adjList.put(curEdge.getDestination(),new HashSet<Edge>());//initializes the set for the destination vertex.
+            }
+
+            Iterator<Edge> setIterator = adjList.get(curEdge).iterator();
+            while(setIterator.hasNext()){
+                Edge test  = setIterator.next();
+                if(test.getDestination() == curEdge.getDestination() && test.getSource() ==
+                        curEdge.getSource() && test.getWeight() != curEdge.getWeight()){
+                    throw new IllegalStateException("Edges must be unique.");
                 }
             }
-
-            // Edge is valid; add to list.
-            adjList[fromVertex].add(e);
+            adjList.get(curEdge.getSource()).add(curEdge); //adds the edge to the set of edges for source vertex.
+            adjList.get(curEdge.getDestination()).add(curEdge); //adds the edge to the set of edges for the dest. vertex.
         }
     }
 
@@ -46,6 +53,7 @@ public class MyGraph implements Graph {
      */
     public Collection<Vertex> vertices() {
         //TODO YOUR CODE HERE
+        return null;
     }
 
     /**
@@ -54,6 +62,7 @@ public class MyGraph implements Graph {
      */
     public Collection<Edge> edges() {
         //TODO YOUR CODE HERE
+        return null;
     }
 
     /**
@@ -67,6 +76,7 @@ public class MyGraph implements Graph {
     public Collection<Vertex> adjacentVertices(Vertex v) {
 
         //TODO YOUR CODE HERE
+        return null;
     }
 
     /**
@@ -81,6 +91,7 @@ public class MyGraph implements Graph {
     public int edgeCost(Vertex a, Vertex b) {
 
         //TODO YOUR CODE HERE
+        return 0;
     }
 
     /**
@@ -97,6 +108,7 @@ public class MyGraph implements Graph {
     public Path shortestPath(Vertex a, Vertex b) {
 
         //TODO YOUR CODE HERE (you might comment this out this method while doing Part 1)
+        return null;
     }
 
 }

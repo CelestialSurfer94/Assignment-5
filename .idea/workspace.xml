@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="337c26b0-7527-4762-8d4b-ce58b705ae05" name="Default" comment="">
-<<<<<<< HEAD
-<<<<<<< HEAD
+    <list default="true" id="f931751e-1e5c-46f2-8ace-6c277e62e73e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Test.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/Assignment 5 373.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Assignment5" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Edge.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/FindPaths.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Graph.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/MyGraph.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Path.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Vertex.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/edge.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/vertex.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-=======
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Edge.java" afterPath="$PROJECT_DIR$/Edge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyGraph.java" afterPath="$PROJECT_DIR$/MyGraph.java" />
-=======
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
     </list>
     <ignored path="Assignment 5 373.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path="$PROJECT_DIR$/out/" />
     <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,167 +39,73 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="600">
-      <file leaf-file-name="Edge.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Edge.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state relative-caret-position="503">
-              <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
-              <folding>
-                <element signature="e#597#598#0" expanded="true" />
-                <element signature="e#615#616#0" expanded="true" />
-                <element signature="e#750#751#0" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#876#877#0" expanded="true" />
-                <element signature="e#896#897#0" expanded="true" />
-                <element signature="e#1030#1031#0" expanded="true" />
-                <element signature="e#1076#1077#0" expanded="true" />
-              </folding>
-=======
-            <state relative-caret-position="840">
-              <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
-              <folding />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-            <state relative-caret-position="462">
-              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-              <folding />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-=======
-            <state relative-caret-position="396">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-              <folding />
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="FindPaths.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FindPaths.java">
+        <entry file="file://$PROJECT_DIR$/src/FindPaths.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state relative-caret-position="2541">
-=======
-            <state relative-caret-position="1925">
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-            <state relative-caret-position="2574">
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-=======
-            <state relative-caret-position="2574">
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
-              <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+            <state relative-caret-position="1650">
+              <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-      <file leaf-file-name="MyGraph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="573">
-              <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
-=======
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
       <file leaf-file-name="Vertex.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vertex.java">
+        <entry file="file://$PROJECT_DIR$/src/Vertex.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
+            <state relative-caret-position="99">
+              <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyGraph.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/MyGraph.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Test.java">
+          <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-=======
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-      <file leaf-file-name="MyGraph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MyGraph.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Path.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Path.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="50">
-=======
-            <state relative-caret-position="66">
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-              <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Graph.java">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="1196">
-              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-=======
-            <state relative-caret-position="700">
-              <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-              <folding />
-=======
-      <file leaf-file-name="Vertex.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Vertex.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1254">
-              <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+              <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
               <folding>
-                <element signature="e#505#506#0" expanded="false" />
-                <element signature="e#533#534#0" expanded="false" />
-                <element signature="e#676#677#0" expanded="false" />
-                <element signature="e#704#705#0" expanded="false" />
+                <element signature="e#106#107#0" expanded="true" />
+                <element signature="e#158#159#0" expanded="true" />
               </folding>
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Edge.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Edge.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1224">
+              <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
+              <folding>
+                <element signature="e#1845#1846#0" expanded="true" />
+                <element signature="e#1876#1877#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="master" />
-      </map>
-    </option>
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-=======
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -203,18 +115,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Vertex.java" />
-        <option value="$PROJECT_DIR$/FindPaths.java" />
-        <option value="$PROJECT_DIR$/Graph.java" />
-        <option value="$PROJECT_DIR$/Path.java" />
-        <option value="$PROJECT_DIR$/Edge.java" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <option value="$PROJECT_DIR$/MyGraph.java" />
-=======
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-=======
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
+        <option value="$PROJECT_DIR$/src/Test.java" />
+        <option value="$PROJECT_DIR$/src/Edge.java" />
+        <option value="$PROJECT_DIR$/src/MyGraph.java" />
       </list>
     </option>
   </component>
@@ -224,20 +127,20 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Bundled (Maven 3)" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectFrameBounds">
-<<<<<<< HEAD
-    <option name="x" value="-11" />
-    <option name="y" value="-11" />
-    <option name="width" value="1849" />
-    <option name="height" value="1102" />
-=======
     <option name="x" value="-13" />
     <option name="y" value="-13" />
     <option name="width" value="2762" />
     <option name="height" value="1790" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
     <OptionsSetting value="true" id="Remove" />
     <OptionsSetting value="true" id="Checkout" />
@@ -248,7 +151,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -261,80 +164,34 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <pane id="Scratches" />
-<<<<<<< HEAD
-=======
-      <pane id="Scope" />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-<<<<<<< HEAD
-        <subPane />
-=======
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment5" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-      </pane>
-=======
-=======
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment 5 373" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment 5 373" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment 5 373" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-<<<<<<< HEAD
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-=======
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-<<<<<<< HEAD
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
-=======
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.Test">
+    <configuration default="false" name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="Test" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Assignment 5 373" />
+      <envs />
+      <method />
+    </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-<<<<<<< HEAD
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -372,8 +229,6 @@
       <option name="PREFERRED_AVD" value="" />
       <method />
     </configuration>
-=======
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -397,7 +252,6 @@
       <envs />
       <method />
     </configuration>
-<<<<<<< HEAD
     <configuration default="true" type="ArquillianJUnit" factoryName="">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -546,11 +400,10 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="true" />
+      <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
-=======
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -572,7 +425,6 @@
       <patterns />
       <method />
     </configuration>
-<<<<<<< HEAD
     <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -646,8 +498,6 @@
     <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
       <method />
     </configuration>
-=======
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -656,15 +506,12 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-<<<<<<< HEAD
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
       <envs />
       <method />
     </configuration>
-=======
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -693,7 +540,6 @@
       <listeners />
       <method />
     </configuration>
-<<<<<<< HEAD
     <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -723,6 +569,12 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
@@ -751,13 +603,14 @@
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
       <method />
     </configuration>
-  </component>
-  <component name="SbtLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-=======
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Application.Test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -767,110 +620,51 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="337c26b0-7527-4762-8d4b-ce58b705ae05" name="Default" comment="" />
-      <created>1463370508249</created>
+      <changelist id="f931751e-1e5c-46f2-8ace-6c277e62e73e" name="Default" comment="" />
+      <created>1463874010722</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1463370508249</updated>
-      <workItem from="1463370509954" duration="209000" />
-      <workItem from="1463437673845" duration="24000" />
-      <workItem from="1463437758317" duration="47000" />
-<<<<<<< HEAD
-      <workItem from="1463858644802" duration="566000" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <workItem from="1463861270299" duration="852000" />
-      <workItem from="1463862401241" duration="325000" />
-      <workItem from="1463863203032" duration="4068000" />
-=======
-      <workItem from="1463860359304" duration="7706000" />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-      <workItem from="1463861270299" duration="852000" />
-      <workItem from="1463862401241" duration="325000" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-=======
-      <workItem from="1463858644802" duration="1833000" />
-      <workItem from="1463862319702" duration="25000" />
-      <workItem from="1463862801346" duration="268000" />
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
+      <updated>1463874010722</updated>
+      <workItem from="1463874014726" duration="288000" />
+      <workItem from="1463874319408" duration="640000" />
+      <workItem from="1464316709410" duration="349000" />
+      <workItem from="1464318366001" duration="4923000" />
+      <workItem from="1464410103662" duration="6088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="6091000" />
+    <option name="totallyTimeSpent" value="12288000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1790" extended-state="6" />
-=======
-    <option name="totallyTimeSpent" value="8552000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="1849" height="1102" extended-state="6" />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-    <option name="totallyTimeSpent" value="2406000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="2762" height="1790" extended-state="6" />
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
     <editor active="true" />
-=======
-    <option name="totallyTimeSpent" value="2023000" />
-  </component>
-  <component name="ToolWindowManager">
-    <frame x="-13" y="-13" width="2762" height="1790" extended-state="6" />
-    <editor active="false" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996845" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5014663" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-=======
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2616311" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-<<<<<<< HEAD
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-=======
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32996845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-<<<<<<< HEAD
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-=======
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -885,83 +679,31 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-<<<<<<< HEAD
-    <breakpoint-manager>
-      <option name="time" value="1" />
-    </breakpoint-manager>
-=======
     <breakpoint-manager />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Edge.java">
+    <entry file="file://$PROJECT_DIR$/src/FindPaths.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-=======
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1650">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="99">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -969,218 +711,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="132">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#106#107#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.java">
+    <entry file="file://$PROJECT_DIR$/src/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-=======
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1386">
+          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
           <folding>
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1845#1846#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-=======
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
+    <entry file="file://$PROJECT_DIR$/src/FindPaths.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="1650">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.java">
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        <state relative-caret-position="99">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-<<<<<<< HEAD
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2805">
-=======
-        <state relative-caret-position="1925">
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1925">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-<<<<<<< HEAD
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-=======
-            <element signature="imports" expanded="true" />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-          <folding>
-            <element signature="e#505#506#0" expanded="false" />
-            <element signature="e#533#534#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-            <element signature="e#704#705#0" expanded="false" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="50">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Path.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1188,52 +757,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.java">
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="950">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
+        <state relative-caret-position="132">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
+          <folding>
+            <element signature="e#106#107#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
+          <folding>
+            <element signature="e#1845#1846#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FindPaths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.java">
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-=======
-    <entry file="file://$PROJECT_DIR$/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2805">
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+        <state relative-caret-position="99">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Path.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGraph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1241,421 +803,123 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.java">
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-<<<<<<< HEAD
-          <folding />
-=======
+        <state relative-caret-position="132">
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
           <folding>
-            <element signature="e#505#506#0" expanded="false" />
-            <element signature="e#533#534#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-            <element signature="e#704#705#0" expanded="false" />
+            <element signature="e#106#107#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
           </folding>
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.java">
+    <entry file="file://$PROJECT_DIR$/src/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-<<<<<<< HEAD
+        <state relative-caret-position="1386">
+          <caret line="48" column="39" selection-start-line="48" selection-start-column="39" selection-end-line="48" selection-end-column="39" />
           <folding>
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#1845#1846#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
           </folding>
-=======
-          <folding />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
+    <entry file="file://$PROJECT_DIR$/src/FindPaths.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1353">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        <state relative-caret-position="1650">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
+        <state relative-caret-position="99">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Path.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-<<<<<<< HEAD
-          <folding />
-=======
-          <folding>
-            <element signature="e#505#506#0" expanded="false" />
-            <element signature="e#533#534#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-            <element signature="e#704#705#0" expanded="false" />
-          </folding>
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <folding>
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-          </folding>
-=======
-          <folding />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-          <folding />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-=======
-          <folding />
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1353">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-<<<<<<< HEAD
-          <folding />
-=======
-          <folding>
-            <element signature="e#505#506#0" expanded="false" />
-            <element signature="e#533#534#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-            <element signature="e#704#705#0" expanded="false" />
-          </folding>
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-          <caret line="85" column="0" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-          <folding>
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
-          </folding>
-=======
-          <folding />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-          <folding />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-=======
-          <folding />
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2541">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1353">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-<<<<<<< HEAD
-          <folding />
-=======
-          <folding>
-            <element signature="e#505#506#0" expanded="false" />
-            <element signature="e#533#534#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-            <element signature="e#704#705#0" expanded="false" />
-          </folding>
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vertex.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/edge.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/Path.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
-=======
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="38" column="7" selection-start-line="38" selection-start-column="7" selection-end-line="38" selection-end-column="7" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Vertex.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="1196">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding />
-=======
-        <state relative-caret-position="1254">
-          <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
-          <folding>
-            <element signature="e#505#506#0" expanded="false" />
-            <element signature="e#533#534#0" expanded="false" />
-            <element signature="e#676#677#0" expanded="false" />
-            <element signature="e#704#705#0" expanded="false" />
-          </folding>
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-<<<<<<< HEAD
-=======
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1925">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-=======
-          <folding />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Path.java">
-=======
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="50">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-        <state relative-caret-position="66">
-          <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state relative-caret-position="2541">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
-=======
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
-=======
-    <entry file="file://$PROJECT_DIR$/FindPaths.java">
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2574">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+        <state relative-caret-position="132">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#106#107#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Graph.java">
->>>>>>> 080b6e1cc5a886259abceda66e4e5b5a017da2b3
+    <entry file="file://$PROJECT_DIR$/src/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="573">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
+        <state relative-caret-position="99">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#1845#1846#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FindPaths.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="51" column="13" selection-start-line="51" selection-start-column="13" selection-end-line="51" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyGraph.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_65/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
+        <state relative-caret-position="513">
+          <caret line="99" column="22" selection-start-line="99" selection-start-column="22" selection-end-line="99" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Vertex.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="99">
+          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="87" column="33" selection-start-line="87" selection-start-column="33" selection-end-line="87" selection-end-column="33" />
+          <folding>
+            <element signature="e#1845#1846#0" expanded="true" />
+            <element signature="e#1876#1877#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-=======
-        <state relative-caret-position="700">
-          <caret line="28" column="60" selection-start-line="28" selection-start-column="60" selection-end-line="28" selection-end-column="60" />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-        <state relative-caret-position="2574">
-          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state relative-caret-position="503">
-          <caret line="18" column="55" selection-start-line="18" selection-start-column="55" selection-end-line="18" selection-end-column="55" />
+          <caret line="5" column="44" selection-start-line="5" selection-start-column="44" selection-end-line="5" selection-end-column="44" />
           <folding>
-            <element signature="e#597#598#0" expanded="true" />
-            <element signature="e#615#616#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#876#877#0" expanded="true" />
-            <element signature="e#896#897#0" expanded="true" />
-            <element signature="e#1030#1031#0" expanded="true" />
-            <element signature="e#1076#1077#0" expanded="true" />
+            <element signature="e#106#107#0" expanded="true" />
+            <element signature="e#158#159#0" expanded="true" />
           </folding>
-=======
-        <state relative-caret-position="840">
-          <caret line="73" column="4" selection-start-line="73" selection-start-column="4" selection-end-line="73" selection-end-column="4" />
-          <folding />
->>>>>>> e146ec8c0f46cdc470d78f49561a87d7a3406d75
-=======
-        <state relative-caret-position="462">
-          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
->>>>>>> ce448b7792f8a6731e5928d6f83c4bf1add134c4
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Edge.java">
+    <entry file="file://$PROJECT_DIR$/src/MyGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+        <state relative-caret-position="594">
+          <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
           <folding />
         </state>
       </provider>

@@ -3,12 +3,16 @@
  */
 public class Vertex {
     private final String label;   // label attached to this vertex
+    private boolean known;
+    private int distance;
 
     /**
      * Construct a new vertex
      * @param label the label attached to this vertex
      */
     public Vertex(String label) {
+        distance = Integer.MAX_VALUE;
+        known = false;
         if(label == null)
             throw new IllegalArgumentException("null");
         this.label = label;
@@ -52,5 +56,21 @@ public class Vertex {
         } else {
             return label.equals(other.label);
         }
+    }
+
+    public void setKnown() {
+        known = true;
+    }
+
+    public void setDistance(int d) {
+        distance = d;
+    }
+
+    public boolean isKnown() {
+        return known;
+    }
+
+    public int getDistance() {
+        return distance;
     }
 }

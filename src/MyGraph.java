@@ -74,7 +74,7 @@ public class MyGraph implements Graph {
      * @return an iterable collection of vertices adjacent to v in the graph
      * @throws IllegalArgumentException if v does not exist.
      */
-    public Collection<Vertex> adjacentVertices(Vertex v) { //potential problem here. What about edges coming back into a node?
+    public Collection<Vertex> adjacentVertices(Vertex v) {
         if(vertexHash[v.hashCode()] == null){
             throw new IllegalArgumentException();
         }
@@ -127,8 +127,39 @@ public class MyGraph implements Graph {
      * @throws IllegalArgumentException if a or b does not exist.
      */
     public Path shortestPath(Vertex a, Vertex b) {
+        if (vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null) {
+            throw new IllegalArgumentException();
+        }
+        Vertex current = a;
+        current.setDistance(0);
+        Set<Vertex> unknownNodes = adjMap.keySet();
+        unknownNodes.remove(current);
+        while (!unknownNodes.isEmpty()) {
+            current.setKnown();
+            for (Vertex v : adjacentVertices(current)) {
+                int cost1 = current.getDistance() + edgeCost(current, v);
+                int cost2 = v.getDistance();
+                if (cost1 < cost2) {
+                    v.setDistance(cost1);
 
+                }
+            }
+        }
         return null;
     }
 
+    private Vertex closestUnknownNeighbor(Vertex v) {
+        int lowestCost = Integer.MAX_VALUE;
+        Vertex closestUnknownNeighbor = null;
+        for (Vertex neighbor : adjacentVertices(v)) {
+            if (!neighbor.isKnown()) {
+                int cost = edgeCost(v, neighbor);
+                if (cost < lowestCost) {
+                    lowestCost = cost;
+                    closestUnknownNeighbor = neighbor;
+                }
+            }
+        }
+        return closestUnknownNeighbor;
+    }
 }

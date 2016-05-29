@@ -9,16 +9,36 @@ public class Test {
         List<Vertex> vertices = new ArrayList<Vertex>();
         Set<Edge> edges = new HashSet<Edge>();
 
-        for (int i = 0; i < 5; i++) {
-            vertices.add(new Vertex("" + ((char) i + 65)));
-        }
-
-        for (int i = 0; i < 5; i++) {
-            edges.add(new Edge(vertices.get(r.nextInt(5)), vertices.get(r.nextInt(5)), r.nextInt(20)));
-        }
+        Vertex a = new Vertex("A");
+        Vertex b = new Vertex("B");
+        Vertex c = new Vertex("C");
+        Vertex d = new Vertex("D");
+        Vertex e = new Vertex("E");
+        Edge ab = new Edge(a, b, 2);
+        Edge ac = new Edge(a, c, 3);
+        Edge ad = new Edge(a, d, 5);
+        Edge bc = new Edge(b, c, 2);
+        Edge be = new Edge(b, e, 5);
+        Edge cd = new Edge(c, d, 1);
+        Edge ce = new Edge(c, e, 4);
+        Edge de = new Edge(d, e, 2);
+        vertices.add(a);
+        vertices.add(b);
+        vertices.add(c);
+        vertices.add(d);
+        vertices.add(e);
+        edges.add(ab);
+        edges.add(ac);
+        edges.add(ad);
+        edges.add(bc);
+        edges.add(be);
+        edges.add(cd);
+        edges.add(ce);
+        edges.add(de);
 
 
         MyGraph g = new MyGraph(vertices, edges);
+        g.shortestPath(a, e);
 
     }
 }

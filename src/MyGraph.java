@@ -6,44 +6,43 @@ import java.util.*;
  */
 public class MyGraph implements Graph {
     private static final int HASH_CONST = 4973; // Size of adj list
-    private Vertex[] vertices;
-    private Map<Vertex, Set<Edge>> adjList;
+    private Map<Vertex, Set<Edge>> adjMap;
+    private Vertex[] vertexHash;
 
+    public MyGraph(Collection<Vertex> vertices, Collection<Edge> edges) {
+        adjMap = new HashMap<Vertex, Set<Edge>>();
+        vertexHash = new Vertex[HASH_CONST];
 
-    public MyGraph(Collection<Vertex> vertexes, Collection<Edge> edges) {
-        Iterator<Vertex> vertexIterator = vertexes.iterator();
-        while(vertexIterator.hasNext()) { // iterates through vertices, adds each vertex to hashTable
-            Vertex curVertex = vertexIterator.next();
-            vertices[curVertex.hashCode()] = curVertex; //***have to leave local variable here.***
+        // Hash each vertex parameter and add to adjMap
+        for (Vertex v : vertices) {
+            adjMap.put(v, new HashSet<Edge>());
+            vertexHash[v.hashCode()] = v;
         }
 
-        Iterator<Edge> edgeIterator = edges.iterator();
-        while(edgeIterator.hasNext()){  //iterates through and adds valid edges to the adjacency list.
-            Edge curEdge = edgeIterator.next();
-            int sourceVal  = curEdge.getSource().hashCode(); // hashcode of the source vertex we are looking at.
-            int destinationVal = curEdge.getDestination().hashCode();//hashCode of the dest. val.
-            if (curEdge.getWeight() < 0 ||vertices[sourceVal] == null //checks weights, and whether the vertex exists.
-                    || vertices[destinationVal] == null){
-                throw new IllegalStateException("Weight must be >= 0 and vertices must exist in graph.");
+        // Check each possible edge for exceptions
+        for (Edge possibleEdge : edges) {
+            Vertex from = possibleEdge.getSource();
+            Vertex to = possibleEdge.getDestination();
+
+            // Ensure destination and source vertices are in graph and weight is not negative
+            if (vertexHash[from.hashCode()] == null || vertexHash[to.hashCode()] == null ||
+                    possibleEdge.getWeight() < 0) {
+                throw new IllegalArgumentException("Please check your parameters");
             }
 
-            if(adjList.get(vertices[sourceVal]) == null){ // source vertex needs new set.
-                adjList.put(curEdge.getSource(),new HashSet<Edge>()); //initializes the set for source vertex.
-            }
-            if(adjList.get(vertices[destinationVal]) ==  null){ //dest. vertex needs new set.
-                adjList.put(curEdge.getDestination(),new HashSet<Edge>());//initializes the set for the destination vertex.
-            }
+            // Ensure edge is not redundant with same weight.
+            for (Edge graphEdge : adjMap.get(from)) {
+                boolean sameSource = graphEdge.getSource().equals(possibleEdge.getSource());
+                boolean sameDestination = graphEdge.getDestination().equals(possibleEdge.getDestination());
+                boolean differentWeight = graphEdge.getWeight() != possibleEdge.getWeight();
 
-            Iterator<Edge> setIterator = adjList.get(curEdge).iterator();
-            while(setIterator.hasNext()){
-                Edge test  = setIterator.next();
-                if(test.getDestination() == curEdge.getDestination() && test.getSource() ==
-                        curEdge.getSource() && test.getWeight() != curEdge.getWeight()){
-                    throw new IllegalStateException("Edges must be unique.");
+                if (sameSource && sameDestination && differentWeight) {
+                    throw new IllegalArgumentException("Redundant edge detected");
                 }
             }
-            adjList.get(curEdge.getSource()).add(curEdge); //adds the edge to the set of edges for source vertex.
-            adjList.get(curEdge.getDestination()).add(curEdge); //adds the edge to the set of edges for the dest. vertex.
+
+            // Edge passed all checks; add to adjMap
+            adjMap.get(from).add(possibleEdge);
         }
     }
 
@@ -52,7 +51,7 @@ public class MyGraph implements Graph {
      * @return the vertices as a collection (which is anything iterable)
      */
     public Collection<Vertex> vertices() {
-        return adjList.keySet();
+        return adjMap.keySet();
     }
 
     /**
@@ -60,7 +59,11 @@ public class MyGraph implements Graph {
      * @return the edges as a collection (which is anything iterable)
      */
     public Collection<Edge> edges() {
-        return null;
+        Set<Edge> edges = new HashSet<Edge>();
+        for (Set<Edge> s : adjMap.values()) {
+            edges.addAll(s);
+        }
+        return edges;
     }
 
     /**
@@ -72,12 +75,12 @@ public class MyGraph implements Graph {
      * @throws IllegalArgumentException if v does not exist.
      */
     public Collection<Vertex> adjacentVertices(Vertex v) { //potential problem here. What about edges coming back into a node?
-        if(vertices[v.hashCode()] == null){
+        if(vertexHash[v.hashCode()] == null){
             throw new IllegalArgumentException();
         }
-        Set adjVert = new HashSet<>();
-        Iterator<Edge> itr = adjList.get(v).iterator(); //set of edges for vertex v.
-        while(itr.hasNext()){
+        Set<Vertex> adjVert = new HashSet<Vertex>();
+        Iterator<Edge> itr = adjMap.get(v).iterator(); //set of edges for vertex v.
+        while(itr.hasNext()) {
             Edge curEdge = itr.next();
             adjVert.add(curEdge.getDestination()); // adds the destination nodes from vertex v, through current edge.
         }
@@ -85,7 +88,7 @@ public class MyGraph implements Graph {
     }
 
     public Set<Edge> vertexEdges(Vertex a){ //returns the set of edges for a given vertex.
-        return adjList.get(a);
+        return adjMap.get(a);
     }
 
     /**
@@ -98,7 +101,7 @@ public class MyGraph implements Graph {
      * @throws IllegalArgumentException if a or b do not exist.
      */
     public int edgeCost(Vertex a, Vertex b) {
-        if(vertices[a.hashCode()] == null || vertices[b.hashCode()] == null){ // the vertices do not exist.
+        if(vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null){ // the vertices do not exist.
             throw new IllegalArgumentException("Vertices must be in the graph.");
         }
         Set<Edge> edges = vertexEdges(a); //all of the edges for the vertex.
@@ -124,9 +127,35 @@ public class MyGraph implements Graph {
      * @throws IllegalArgumentException if a or b does not exist.
      */
     public Path shortestPath(Vertex a, Vertex b) {
+        if (vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null) {
+            throw new IllegalArgumentException();
+        }
+        Vertex current = a;
+        current.setDistance(0);
+        Queue<Vertex> queue = new PriorityQueue<Vertex>();
+        queue.addAll(vertices());
+        while (!queue.isEmpty()) {
+            Vertex minAdjac = closestUnknownNeighbor(current); //returns the lowest cost vertex, changes the distance of that node, marks it as known.
+            current = queue.remove();
+        }
 
-        //TODO YOUR CODE HERE (you might comment this out this method while doing Part 1)
         return null;
     }
 
+    private Vertex closestUnknownNeighbor(Vertex v) {
+        int lowestCost = Integer.MAX_VALUE;
+        Vertex closestUnknownNeighbor = null;
+        for (Vertex neighbor : adjacentVertices(v)) { //iterates through the adjacent vertices, MARKING EVERY NODE DISTANCE ALONG THE WAY! EVEN IF UNKNOWN.
+            int currentCost = edgeCost(v,neighbor) + v.getDistance(); //edge cost + the existing distance.
+            if(currentCost < neighbor.getDistance()){ // current cost < the neighbors current cost, change neighbor BUT DONT MAKE CLOSEST UNKNOWN.
+                neighbor.setDistance(currentCost);
+            }
+
+            if(currentCost < lowestCost){ //finds the lowest of the adjacent. returns that shit.
+                closestUnknownNeighbor = neighbor;
+                lowestCost = neighbor.getDistance();
+            }
+        }
+        return closestUnknownNeighbor;
+    }
 }

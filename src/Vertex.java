@@ -1,8 +1,10 @@
 /**
  * Representation of a graph vertex
  */
-public class Vertex {
+public class Vertex implements Comparable<Vertex>{
     private final String label;   // label attached to this vertex
+    private int distance;
+    private boolean known;
 
     /**
      * Construct a new vertex
@@ -12,7 +14,9 @@ public class Vertex {
         if(label == null)
             throw new IllegalArgumentException("null");
         this.label = label;
+        this.distance = Integer.MAX_VALUE;
     }
+
 
     /**
      * Get a vertex label
@@ -52,5 +56,24 @@ public class Vertex {
         } else {
             return label.equals(other.label);
         }
+    }
+
+    public int getDistance(){
+        return this.distance;
+    }
+
+    public boolean isKnown() {
+        return this.known;
+    }
+    public void setKnown(){
+        this.known = true;
+    }
+
+    public int compareTo(Vertex other){
+        return this.distance - other.distance; //this is probs wrong.
+    }
+
+    public void setDistance(int n){
+        this.distance = n;
     }
 }

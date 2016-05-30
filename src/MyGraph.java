@@ -1,3 +1,5 @@
+import com.sun.org.apache.xpath.internal.SourceTree;
+
 import java.util.*;
 
 /**
@@ -74,7 +76,7 @@ public class MyGraph implements Graph {
      * @return an iterable collection of vertices adjacent to v in the graph
      * @throws IllegalArgumentException if v does not exist.
      */
-    public Collection<Vertex> adjacentVertices(Vertex v) {
+    public Collection<Vertex> adjacentVertices(Vertex v) { //potential problem here. What about edges coming back into a node?
         if(vertexHash[v.hashCode()] == null){
             throw new IllegalArgumentException();
         }
@@ -132,34 +134,26 @@ public class MyGraph implements Graph {
         }
         Vertex current = a;
         current.setDistance(0);
-        Set<Vertex> unknownNodes = adjMap.keySet();
-        unknownNodes.remove(current);
-        while (!unknownNodes.isEmpty()) {
-            current.setKnown();
-            for (Vertex v : adjacentVertices(current)) {
-                int cost1 = current.getDistance() + edgeCost(current, v);
-                int cost2 = v.getDistance();
-                if (cost1 < cost2) {
-                    v.setDistance(cost1);
-
-                }
-            }
+        Queue<Vertex> queue = new PriorityQueue<Vertex>();
+        queue.addAll(vertices());
+        while (!queue.isEmpty()) {
+            current = queue.remove();
+            findClosestUnknownNeighbor(current); //returns the lowest cost vertex, changes the distance of that node, marks it as known.
         }
+        System.out.println(b.getDistance());
         return null;
     }
 
-    private Vertex closestUnknownNeighbor(Vertex v) {
+    private void findClosestUnknownNeighbor(Vertex v) {
         int lowestCost = Integer.MAX_VALUE;
-        Vertex closestUnknownNeighbor = null;
-        for (Vertex neighbor : adjacentVertices(v)) {
-            if (!neighbor.isKnown()) {
-                int cost = edgeCost(v, neighbor);
-                if (cost < lowestCost) {
-                    lowestCost = cost;
-                    closestUnknownNeighbor = neighbor;
-                }
+        for (Vertex neighbor : adjacentVertices(v)) { //iterates through the adjacent vertices, MARKING EVERY NODE DISTANCE ALONG THE WAY! EVEN IF UNKNOWN.
+            int currentCost = edgeCost(v, neighbor) + v.getDistance(); //edge cost + the existing distance.
+            if(currentCost < neighbor.getDistance()){ // current cost < the neighbors current cost, change neighbor
+                neighbor.setDistance(currentCost);
+            }
+            if(currentCost < lowestCost){ //finds the lowest of the adjacent. returns that shit.
+                lowestCost = neighbor.getDistance();
             }
         }
-        return closestUnknownNeighbor;
     }
 }

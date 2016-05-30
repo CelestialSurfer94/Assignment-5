@@ -137,20 +137,15 @@ public class MyGraph implements Graph {
         List<Vertex> path = new LinkedList<Vertex>();
         while (!unknowns.isEmpty()) {
             unknowns.remove(current);
-            int cheapestCost = Integer.MAX_VALUE;
-            Vertex cheapestNeighbor = null;
             for(Vertex v : adjacentVertices(current)) {
                 int cost = current.getDistance() + edgeCost(current, v);
                 if (cost < v.getDistance()) {
                     v.setDistance(cost);
                 }
-                if (cost < cheapestCost) {
-                    cheapestNeighbor = v;
-                    cheapestCost = cost;
-                }
             }
-            current = cheapestNeighbor;
+            current = unknowns.remove();
         }
+        System.out.println(b.getDistance());
         return null;
     }
 }

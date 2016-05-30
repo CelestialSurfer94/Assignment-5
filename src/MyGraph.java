@@ -3,6 +3,8 @@ import java.util.*;
 /**
  * A representation of a graph.
  * Assumes that we do not have negative cost edges in the graph.
+ * @author Evan Gordon
+ * @author Kalvin Suting
  */
 public class MyGraph implements Graph {
     private static final int HASH_CONST = 4973; // Size of adj list
@@ -27,7 +29,7 @@ public class MyGraph implements Graph {
             // Ensure destination and source vertices are in graph and weight is not negative
             if (vertexHash[from.hashCode()] == null || vertexHash[to.hashCode()] == null ||
                     possibleEdge.getWeight() < 0) {
-                throw new IllegalArgumentException("Please check your parameters");
+                throw new IllegalArgumentException("Invalid edge detected.");
             }
 
             // Ensure edge is not redundant with same weight.
@@ -37,7 +39,7 @@ public class MyGraph implements Graph {
                 boolean differentWeight = graphEdge.getWeight() != possibleEdge.getWeight();
 
                 if (sameSource && sameDestination && differentWeight) {
-                    throw new IllegalArgumentException("Redundant edge detected");
+                    throw new IllegalArgumentException("Redundant edge detected.");
                 }
             }
 
@@ -132,21 +134,23 @@ public class MyGraph implements Graph {
         }
         List<Vertex> path = new LinkedList<Vertex>();
         Queue<Vertex> unvisitedVertices = new PriorityQueue<Vertex>();
+        a.setCost(0); // Distance to a is zero.
         unvisitedVertices.addAll(vertices());
-        Vertex currentSource = a; // Begin with a.
-        currentSource.setCost(0); // Distance to a is zero.
         while (!unvisitedVertices.isEmpty()) { // There are still unvisited nodes.
-            unvisitedVertices.remove(currentSource);
+            Vertex currentSource = unvisitedVertices.remove();
+            path.add(currentSource);
             for(Vertex v : adjacentVertices(currentSource)) {
 
                 // Calculate cost to get from currentSource to each edge.
                 int cost = currentSource.getCost() + edgeCost(currentSource, v);
                 if (cost < v.getCost()) {  // A shorter path than previously known has been discovered.
                     v.setCost(cost);
+                    unvisitedVertices.remove(v);
+                    unvisitedVertices.add(v);
                 }
             }
-            currentSource = unvisitedVertices.remove(); // Move to smallest unknown neighbor.
         }
+        System.out.println(path.toString());
         return null;
     }
 }

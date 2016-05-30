@@ -62,7 +62,7 @@ public class Vertex implements Comparable<Vertex>{
     }
 
     public int compareTo(Vertex other){
-        return this.cost - other.cost; //this is probs wrong.
+        return this.cost - other.cost;
     }
 
     public void setCost(int n){

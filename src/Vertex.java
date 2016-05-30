@@ -3,7 +3,7 @@
  */
 public class Vertex implements Comparable<Vertex>{
     private final String label;   // label attached to this vertex
-    private int distance;
+    private int cost;
 
     /**
      * Construct a new vertex
@@ -13,7 +13,7 @@ public class Vertex implements Comparable<Vertex>{
         if(label == null)
             throw new IllegalArgumentException("null");
         this.label = label;
-        this.distance = Integer.MAX_VALUE;
+        this.cost = Integer.MAX_VALUE; // Default starting value for cost
     }
 
 
@@ -57,15 +57,15 @@ public class Vertex implements Comparable<Vertex>{
         }
     }
 
-    public int getDistance(){
-        return this.distance;
+    public int getCost(){
+        return this.cost;
     }
 
     public int compareTo(Vertex other){
-        return this.distance - other.distance; //this is probs wrong.
+        return this.cost - other.cost; //this is probs wrong.
     }
 
-    public void setDistance(int n){
-        this.distance = n;
+    public void setCost(int n){
+        this.cost = n;
     }
 }

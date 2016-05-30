@@ -74,7 +74,7 @@ public class MyGraph implements Graph {
      * @return an iterable collection of vertices adjacent to v in the graph
      * @throws IllegalArgumentException if v does not exist.
      */
-    public Collection<Vertex> adjacentVertices(Vertex v) { //potential problem here. What about edges coming back into a node?
+    public Collection<Vertex> adjacentVertices(Vertex v) {
         if(vertexHash[v.hashCode()] == null){
             throw new IllegalArgumentException();
         }
@@ -82,7 +82,7 @@ public class MyGraph implements Graph {
         Iterator<Edge> itr = adjMap.get(v).iterator(); //set of edges for vertex v.
         while(itr.hasNext()) {
             Edge curEdge = itr.next();
-            adjVert.add(curEdge.getDestination()); // adds the destination nodes from vertex v, through current edge.
+            adjVert.add(curEdge.getDestination()); // adds the destination nodes from vertex v, through currentSource edge.
         }
         return adjVert;
     }
@@ -128,24 +128,25 @@ public class MyGraph implements Graph {
      */
     public Path shortestPath(Vertex a, Vertex b) {
         if (vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Node does not exist.");
         }
-        Vertex current = a;
-        current.setDistance(0);
-        Queue<Vertex> unknowns = new PriorityQueue<Vertex>();
-        unknowns.addAll(vertices());
         List<Vertex> path = new LinkedList<Vertex>();
-        while (!unknowns.isEmpty()) {
-            unknowns.remove(current);
-            for(Vertex v : adjacentVertices(current)) {
-                int cost = current.getDistance() + edgeCost(current, v);
-                if (cost < v.getDistance()) {
-                    v.setDistance(cost);
+        Queue<Vertex> unvisitedVertices = new PriorityQueue<Vertex>();
+        unvisitedVertices.addAll(vertices());
+        Vertex currentSource = a; // Begin with a.
+        currentSource.setCost(0); // Distance to a is zero.
+        while (!unvisitedVertices.isEmpty()) { // There are still unvisited nodes.
+            unvisitedVertices.remove(currentSource);
+            for(Vertex v : adjacentVertices(currentSource)) {
+
+                // Calculate cost to get from currentSource to each edge.
+                int cost = currentSource.getCost() + edgeCost(currentSource, v);
+                if (cost < v.getCost()) {  // A shorter path than previously known has been discovered.
+                    v.setCost(cost);
                 }
             }
-            current = unknowns.remove();
+            currentSource = unvisitedVertices.remove(); // Move to smallest unknown neighbor.
         }
-        System.out.println(b.getDistance());
         return null;
     }
 }

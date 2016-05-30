@@ -5,6 +5,7 @@ public class Vertex implements Comparable<Vertex>{
     private final String label;   // label attached to this vertex
     private int distance;
     private boolean known;
+    private Vertex parentNode;
 
     /**
      * Construct a new vertex

@@ -135,10 +135,11 @@ public class MyGraph implements Graph {
         Queue<Vertex> queue = new PriorityQueue<Vertex>();
         queue.addAll(vertices());
         while (!queue.isEmpty()) {
-            Vertex minAdjac = closestUnknownNeighbor(current); //returns the lowest cost vertex, changes the distance of that node, marks it as known.
+            closestUnknownNeighbor(current); //returns the lowest cost vertex, changes the distance of that node, marks it as known.
             current = queue.remove();
-        }
 
+        }
+        System.out.println(current.getDistance());
         return null;
     }
 

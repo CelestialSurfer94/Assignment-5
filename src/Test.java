@@ -2,37 +2,45 @@
  * Created by Kalvin on 5/21/2016.
  */
 import java.util.*;
+
 public class Test {
     public static void main(String[] args) {
-        Set <Edge> edges = new HashSet<Edge>();
+        Random r = new Random();
         List<Vertex> vertices = new ArrayList<Vertex>();
-        Queue<Vertex> queue = new PriorityQueue<>();
+        Set<Edge> edges = new HashSet<Edge>();
 
-        vertices.add(new Vertex("A"));
-        vertices.add(new Vertex("B"));
-        vertices.add(new Vertex("C"));
-        vertices.add(new Vertex("D"));
+        Vertex a = new Vertex("A");
+        Vertex b = new Vertex("B");
+        Vertex c = new Vertex("C");
+        Vertex d = new Vertex("D");
+        Vertex e = new Vertex("E");
+        Vertex f = new Vertex("F");
+        Edge ab = new Edge(a, b, 2);
+        Edge ac = new Edge(a, d, 1);
+        Edge ad = new Edge(a, e, 3);
+        Edge bc = new Edge(b, c, 1);
+        Edge be = new Edge(b, e, 0);
+        Edge cd = new Edge(b, f, 5);
+        Edge ce = new Edge(e, f, 10);
+        Edge cf = new Edge(c, f, 10);
+        vertices.add(a);
+        vertices.add(b);
+        vertices.add(c);
+        vertices.add(d);
+        vertices.add(e);
+        vertices.add(f);
+        edges.add(ab);
+        edges.add(ac);
+        edges.add(ad);
+        edges.add(bc);
+        edges.add(be);
+        edges.add(cd);
+        edges.add(ce);
+        edges.add(cf);
 
-        //vertices.get(3).setDistance(1);
 
+        MyGraph g = new MyGraph(vertices, edges);
+        g.shortestPath(a, e);
 
-       // queue.addAll(vertices);
-        // System.out.println(queue.remove());
-
-
-        Edge edge2 = new Edge(vertices.get(0), vertices.get(1),3);
-        Edge edge3 = new Edge(vertices.get(2), vertices.get(3),10);
-        Edge edge4 = new Edge(vertices.get(1), vertices.get(3), 2);
-        Edge edge5 = new Edge(vertices.get(0), vertices.get(3), 7);
-        Edge edge6 = new Edge(vertices.get(0), vertices.get(2), 1);
-        edges.add(edge2);
-        edges.add(edge3);
-        edges.add(edge4);
-        edges.add(edge5);
-        edges.add(edge6);
-
-
-        MyGraph test = new MyGraph(vertices, edges);
-        test.shortestPath(vertices.get(0), vertices.get(3));
     }
 }

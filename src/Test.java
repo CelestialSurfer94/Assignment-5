@@ -19,10 +19,11 @@ public class Test {
         Edge ac = new Edge(a, d, 1);
         Edge ad = new Edge(a, e, 3);
         Edge bc = new Edge(b, c, 1);
-        Edge be = new Edge(b, e, 0);
+        Edge be = new Edge(b, e, 2);
         Edge cd = new Edge(b, f, 5);
+        Edge de = new Edge(d, e, 9);
         Edge ce = new Edge(e, f, 10);
-        Edge cf = new Edge(c, f, 10);
+        Edge cf = new Edge(c, f, 0);
         vertices.add(a);
         vertices.add(b);
         vertices.add(c);
@@ -37,10 +38,11 @@ public class Test {
         edges.add(cd);
         edges.add(ce);
         edges.add(cf);
+        edges.add(de);
 
 
         MyGraph g = new MyGraph(vertices, edges);
-        g.shortestPath(a, e);
+        g.shortestPath(a, f);
 
     }
 }

@@ -36,6 +36,8 @@ public class FindPaths {
 			}
 			
 			//TODO YOUR CODE HERE: call shortestPath and print out the result
+			Path c = g.shortestPath(a,b);
+			System.out.println(c);
 			
 		}
 	}
@@ -72,7 +74,6 @@ public class FindPaths {
 				System.exit(3);
 			}
 		}
-
 		return new MyGraph(v,e);
 	}
 }

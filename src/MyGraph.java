@@ -3,6 +3,8 @@ import java.util.*;
 /**
  * A representation of a graph.
  * Assumes that we do not have negative cost edges in the graph.
+ * @author Evan Gordon
+ * @author Kalvin Suting
  */
 public class MyGraph implements Graph {
     private static final int HASH_CONST = 4973; // Size of adj list
@@ -27,7 +29,7 @@ public class MyGraph implements Graph {
             // Ensure destination and source vertices are in graph and weight is not negative
             if (vertexHash[from.hashCode()] == null || vertexHash[to.hashCode()] == null ||
                     possibleEdge.getWeight() < 0) {
-                throw new IllegalArgumentException("Please check your parameters");
+                throw new IllegalArgumentException("Invalid edge detected.");
             }
 
             // Ensure edge is not redundant with same weight.
@@ -37,7 +39,7 @@ public class MyGraph implements Graph {
                 boolean differentWeight = graphEdge.getWeight() != possibleEdge.getWeight();
 
                 if (sameSource && sameDestination && differentWeight) {
-                    throw new IllegalArgumentException("Redundant edge detected");
+                    throw new IllegalArgumentException("Redundant edge detected.");
                 }
             }
 
@@ -74,7 +76,7 @@ public class MyGraph implements Graph {
      * @return an iterable collection of vertices adjacent to v in the graph
      * @throws IllegalArgumentException if v does not exist.
      */
-    public Collection<Vertex> adjacentVertices(Vertex v) { //potential problem here. What about edges coming back into a node?
+    public Collection<Vertex> adjacentVertices(Vertex v) {
         if(vertexHash[v.hashCode()] == null){
             throw new IllegalArgumentException();
         }
@@ -82,7 +84,7 @@ public class MyGraph implements Graph {
         Iterator<Edge> itr = adjMap.get(v).iterator(); //set of edges for vertex v.
         while(itr.hasNext()) {
             Edge curEdge = itr.next();
-            adjVert.add(curEdge.getDestination()); // adds the destination nodes from vertex v, through current edge.
+            adjVert.add(curEdge.getDestination()); // adds the destination nodes from vertex v, through currentSource edge.
         }
         return adjVert;
     }
@@ -126,37 +128,113 @@ public class MyGraph implements Graph {
      *   the path. Returns null if b is not reachable from a.
      * @throws IllegalArgumentException if a or b does not exist.
      */
-    public Path shortestPath(Vertex a, Vertex b) {
+    public Path shortestPath(Vertex a, Vertex b) { //*****NEED TO IMPLEMENT THE INDEX FIELD OF THE VERTEX NOW.*****
         if (vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null) {
-            throw new IllegalArgumentException();
+            throw new IllegalArgumentException("Node does not exist.");
         }
-        Vertex current = a;
-        current.setDistance(0);
-        Queue<Vertex> queue = new PriorityQueue<Vertex>();
-        queue.addAll(vertices());
-        while (!queue.isEmpty()) {
-            closestUnknownNeighbor(current); //returns the lowest cost vertex, changes the distance of that node, marks it as known.
-            current = queue.remove();
+        List<Vertex> path = new LinkedList<Vertex>();
+        minHeap queue = new minHeap();
+        a.setCost(0); // cost from start to end is zero.
+        int queueIndex = 1;
+        for(Vertex v: vertices()){
+            v.setIndex(queueIndex); //stores the index of the queue in the vertex.
+            queue.add(v); //add current vertex into the queue.
+            queueIndex++;
+        }
+        while (!queue.isEmpty()) { // There are still unvisited nodes.
+            Vertex currentSource = queue.remove();
+            for(Vertex v : adjacentVertices(currentSource)) {
 
+                // Calculate cost to get from currentSource to each edge.
+                int cost = currentSource.getCost() + edgeCost(currentSource, v);
+                if (cost < v.getCost()) {  // A shorter path than previously known has been discovered.
+                    v.setCost(cost);
+                    queue.decreaseKey(v, cost);
+                    v.setParent(currentSource);
+                }
+            }
         }
-        System.out.println(current.getDistance());
-        return null;
+        System.out.println(b.getParent());
+        return new Path(getPath(a,b),b.getCost());
     }
 
-    private Vertex closestUnknownNeighbor(Vertex v) {
-        int lowestCost = Integer.MAX_VALUE;
-        Vertex closestUnknownNeighbor = null;
-        for (Vertex neighbor : adjacentVertices(v)) { //iterates through the adjacent vertices, MARKING EVERY NODE DISTANCE ALONG THE WAY! EVEN IF UNKNOWN.
-            int currentCost = edgeCost(v,neighbor) + v.getDistance(); //edge cost + the existing distance.
-            if(currentCost < neighbor.getDistance()){ // current cost < the neighbors current cost, change neighbor BUT DONT MAKE CLOSEST UNKNOWN.
-                neighbor.setDistance(currentCost);
-            }
-
-            if(currentCost < lowestCost){ //finds the lowest of the adjacent. returns that shit.
-                closestUnknownNeighbor = neighbor;
-                lowestCost = neighbor.getDistance();
-            }
+    private List getPath(Vertex a, Vertex b) {
+        List<Vertex> test = new LinkedList<Vertex>();
+        Vertex current = b;
+        while(current != null){
+            test.add(current);
+            current = current.getParent();
         }
-        return closestUnknownNeighbor;
+        System.out.println(test.toString());
+        return test;
+    }
+
+    public class minHeap{
+        Vertex[] table;
+        int index;
+        public final int DEFAULT_SIZE = 3000;
+
+
+        public minHeap(){
+            table = new Vertex[DEFAULT_SIZE];
+            index = 0;
+        }
+
+        public void add(Vertex a){
+            index++;
+            int newIndex = percolateUp(index, a.getCost());
+            table[newIndex] = a;
+        }
+
+        public int percolateUp(int curIndex, int val){
+            while(curIndex > 1 && val < table[curIndex/2].getCost()){
+                table[curIndex] = table[curIndex/2];
+                curIndex /= 2;
+            }
+            return curIndex;
+        }
+
+        public Vertex remove(){
+            Vertex min = table[1];
+            int newIndex = percolateDown(1,table[index].getCost());
+            table[newIndex] = table[index];
+            index--;
+            return min;
+        }
+
+        public int percolateDown(int curIndex, int val){
+            while(2 * curIndex <= index){
+                int left = 2 * curIndex;
+                int right = left +1;
+                int newIndex = 0;
+                if(right > index || table[left].getCost() < table[right].getCost()){
+                    newIndex = left;
+                } else{
+                    newIndex = right;
+                    if(table[newIndex].getCost() < val){
+                        table[curIndex] = table[newIndex];
+                        curIndex = newIndex;
+                    } else {
+                        break;
+                    }
+                }
+            }
+            return curIndex;
+        }
+
+        public boolean isEmpty(){
+            return index == 0;
+        }
+
+        public void decreaseKey(Vertex a, int newCost){
+            int curIndex = a.getIndex();
+            int newIndex = percolateDown(curIndex, newCost); //could be a.getCost idk.
+            table[newIndex] = a;
+
+        }
+
+        public int getIndex(){
+            return this.index;
+        }
     }
 }

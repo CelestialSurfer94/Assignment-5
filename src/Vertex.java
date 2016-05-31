@@ -3,8 +3,8 @@
  */
 public class Vertex implements Comparable<Vertex>{
     private final String label;   // label attached to this vertex
-    private int distance;
-    private boolean known;
+    private int cost;
+    private int index;
     private Vertex parentNode;
 
     /**
@@ -15,7 +15,8 @@ public class Vertex implements Comparable<Vertex>{
         if(label == null)
             throw new IllegalArgumentException("null");
         this.label = label;
-        this.distance = Integer.MAX_VALUE;
+        this.cost = Integer.MAX_VALUE;
+        this.index = 1;
     }
 
 
@@ -59,22 +60,30 @@ public class Vertex implements Comparable<Vertex>{
         }
     }
 
-    public int getDistance(){
-        return this.distance;
+    public int getCost(){
+        return this.cost;
     }
 
-    public boolean isKnown() {
-        return this.known;
+    public void setIndex(int newIndex){
+        this.index = newIndex;
     }
-    public void setKnown(){
-        this.known = true;
+    public int getIndex(){
+        return this.index;
     }
-
     public int compareTo(Vertex other){
-        return this.distance - other.distance; //this is probs wrong.
+        return this.cost - other.cost;
     }
 
-    public void setDistance(int n){
-        this.distance = n;
+    public void setCost(int n){
+        this.cost = n;
+
+    }
+
+    public void setParent(Vertex a){
+        this.parentNode = a;
+    }
+
+    public Vertex getParent(){
+        return this.parentNode;
     }
 }

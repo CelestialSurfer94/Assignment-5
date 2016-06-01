@@ -20,7 +20,7 @@ public class Test {
         Edge ae = new Edge(a, e, 3);
         Edge bc = new Edge(b, c, 1);
         Edge be = new Edge(b, e, 0);
-        Edge bf = new Edge(b, f, 5);
+        Edge cd = new Edge(c, d, 5);
         Edge ef = new Edge(e, f, 10);
         Edge cf = new Edge(c, f, 10);
         vertices.add(a);
@@ -30,17 +30,28 @@ public class Test {
         vertices.add(e);
         vertices.add(f);
         edges.add(ab);
-        edges.add(ae);
+        edges.add(ad);
         edges.add(ad);
         edges.add(bc);
         edges.add(be);
-        edges.add(bf);
+        edges.add(cd);
         edges.add(ef);
         edges.add(cf);
 
+        Scanner console = new Scanner(System.in);
 
         MyGraph g = new MyGraph(vertices, edges);
-        g.shortestPath(a, e);
+        while (true) {
+            System.out.println("Enter from vertex (A - F)");
+            Vertex from = new Vertex(console.next());
+            System.out.println("Enter to vertex (A - F)");
+            Vertex to = new Vertex(console.next());
+            Path p = g.shortestPath(from, to);
+            System.out.println(p.vertices.toString());
+            System.out.println(p.cost);
+        }
+
+
 
     }
 }

@@ -7,28 +7,27 @@ import java.util.*;
  * @author Kalvin Suting
  */
 public class MyGraph implements Graph {
-    private static final int HASH_CONST = 4973; // Size of adj list
-    private Map<Vertex, Set<Edge>> adjMap;
-    private Vertex[] vertexHash;
+    private static final int HASH_CONST = 9000000; // Size of adj list.
+    private Map<Vertex, Set<Edge>> adjMap; // Mapping of Vertices to their corresponding Edges.
+    private Vertex[] vertexHash; // Hash table of all Vertices in graph.
 
     public MyGraph(Collection<Vertex> vertices, Collection<Edge> edges) {
         adjMap = new HashMap<Vertex, Set<Edge>>();
         vertexHash = new Vertex[HASH_CONST];
 
-        // Hash each vertex parameter and add to adjMap
+        // Hash each vertex parameter and add to adjMap.
         for (Vertex v : vertices) {
-            adjMap.put(v, new HashSet<Edge>());
             vertexHash[v.hashCode()] = v;
+            adjMap.put(vertexHash[v.hashCode()], new HashSet<Edge>());
         }
 
-        // Check each possible edge for exceptions
+        // Check each possible edge for exceptions.
         for (Edge possibleEdge : edges) {
-            Vertex from = possibleEdge.getSource();
-            Vertex to = possibleEdge.getDestination();
+            Vertex from = vertexHash[possibleEdge.getSource().hashCode()];
+            Vertex to = vertexHash[possibleEdge.getDestination().hashCode()];
 
-            // Ensure destination and source vertices are in graph and weight is not negative
-            if (vertexHash[from.hashCode()] == null || vertexHash[to.hashCode()] == null ||
-                    possibleEdge.getWeight() < 0) {
+            // Ensure destination and source vertices are in graph and weight is not negative.
+            if (to == null || from == null || possibleEdge.getWeight() < 0) {
                 throw new IllegalArgumentException("Invalid edge detected.");
             }
 
@@ -43,7 +42,7 @@ public class MyGraph implements Graph {
                 }
             }
 
-            // Edge passed all checks; add to adjMap
+            // Edge passed all checks; add to adjMap.
             adjMap.get(from).add(possibleEdge);
         }
     }
@@ -81,16 +80,21 @@ public class MyGraph implements Graph {
             throw new IllegalArgumentException();
         }
         Set<Vertex> adjVert = new HashSet<Vertex>();
-        Iterator<Edge> itr = adjMap.get(v).iterator(); //set of edges for vertex v.
+        Iterator<Edge> itr = adjMap.get(vertexHash[v.hashCode()]).iterator(); //set of edges for vertex v.
         while(itr.hasNext()) {
             Edge curEdge = itr.next();
-            adjVert.add(curEdge.getDestination()); // adds the destination nodes from vertex v, through currentSource edge.
+            adjVert.add(vertexHash[curEdge.getDestination().hashCode()]); // adds the destination nodes from vertex v, through currentSource edge.
         }
         return adjVert;
     }
 
-    public Set<Edge> vertexEdges(Vertex a){ //returns the set of edges for a given vertex.
-        return adjMap.get(a);
+    /**
+     *
+     * @param a the vertex that this method will find edges for.
+     * @return returns the edges out of vertex a.
+     */
+    public Set<Edge> vertexEdges(Vertex a){
+        return adjMap.get(vertexHash[a.hashCode()]);
     }
 
     /**
@@ -103,23 +107,26 @@ public class MyGraph implements Graph {
      * @throws IllegalArgumentException if a or b do not exist.
      */
     public int edgeCost(Vertex a, Vertex b) {
-        if(vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null){ // the vertices do not exist.
+        if(vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null){
             throw new IllegalArgumentException("Vertices must be in the graph.");
         }
-        Set<Edge> edges = vertexEdges(a); //all of the edges for the vertex.
-        Iterator<Edge> itr = edges.iterator();
-        while(itr.hasNext()){
-            Edge curEdge = itr.next();
-            if(curEdge.getDestination() == b){ //if the destination is equal to b, found the correct edge return weight.
-                return curEdge.getWeight();
+        Vertex from = vertexHash[a.hashCode()];
+        Vertex to = vertexHash[b.hashCode()];
+
+        // Search each edge for desired destination.
+        for (Edge e : adjMap.get(from)) {
+            if (e.getSource().equals(to)) {
+                return e.getWeight();
             }
         }
-        return -1; //edge from a to b does not exist.
+
+        // Desired destination not adjacent to desired source.
+        return -1;
     }
 
     /**
      * Returns the shortest path from a to b in the graph, or null if there is
-     * no such path.  Assumes all edge weights are nonnegative.
+     * no such path.  Assumes all edge weights are non-negative.
      * Uses Dijkstra's algorithm.
      * @param a the starting vertex
      * @param b the destination vertex
@@ -132,25 +139,7 @@ public class MyGraph implements Graph {
         if (vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null) {
             throw new IllegalArgumentException("Node does not exist.");
         }
-        List<Vertex> path = new LinkedList<Vertex>();
-        Queue<Vertex> unvisitedVertices = new PriorityQueue<Vertex>();
-        a.setCost(0); // Distance to a is zero.
-        unvisitedVertices.addAll(vertices());
-        while (!unvisitedVertices.isEmpty()) { // There are still unvisited nodes.
-            Vertex currentSource = unvisitedVertices.remove();
-            path.add(currentSource);
-            for(Vertex v : adjacentVertices(currentSource)) {
 
-                // Calculate cost to get from currentSource to each edge.
-                int cost = currentSource.getCost() + edgeCost(currentSource, v);
-                if (cost < v.getCost()) {  // A shorter path than previously known has been discovered.
-                    v.setCost(cost);
-                    unvisitedVertices.remove(v);
-                    unvisitedVertices.add(v);
-                }
-            }
-        }
-        System.out.println(path.toString());
-        return null;
     }
+
 }

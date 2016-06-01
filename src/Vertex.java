@@ -4,6 +4,8 @@
 public class Vertex implements Comparable<Vertex>{
     private final String label;   // label attached to this vertex
     private int cost;
+    private int index;
+    private Vertex parentNode;
 
     /**
      * Construct a new vertex
@@ -13,7 +15,8 @@ public class Vertex implements Comparable<Vertex>{
         if(label == null)
             throw new IllegalArgumentException("null");
         this.label = label;
-        this.cost = Integer.MAX_VALUE; // Default starting value for cost
+        this.cost = -1;
+        this.index = 1;
     }
 
 
@@ -61,11 +64,26 @@ public class Vertex implements Comparable<Vertex>{
         return this.cost;
     }
 
+    public void setIndex(int newIndex){
+        this.index = newIndex;
+    }
+    public int getIndex(){
+        return this.index;
+    }
     public int compareTo(Vertex other){
         return this.cost - other.cost;
     }
 
     public void setCost(int n){
         this.cost = n;
+
+    }
+
+    public void setParent(Vertex a){
+        this.parentNode = a;
+    }
+
+    public Vertex getParent(){
+        return this.parentNode;
     }
 }

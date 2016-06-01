@@ -9,7 +9,7 @@ import java.util.*;
  * Last modified 5/31/2016
  */
 public class MyGraph implements Graph {
-    private static final int HASH_CONST = 6673; // Size of vertex hash.
+    private static final int HASH_CONST = 90001; // Size of vertex hash.
     private Map<Vertex, Set<Edge>> adjMap; // Mapping of Vertices to their corresponding Edges.
     private Vertex[] vertexHash; // Hash table of all Vertices in graph.
 
@@ -29,7 +29,7 @@ public class MyGraph implements Graph {
         // Hash each vertex parameter and add to adjMap.
         for (Vertex v : vertices) {
             vertexHash[v.hashCode()] = v;
-            adjMap.put(vertexHash[v.hashCode()], new HashSet<Edge>());
+            adjMap.put(v, new HashSet<Edge>());
         }
 
         // Check each possible edge for exceptions.
@@ -92,7 +92,7 @@ public class MyGraph implements Graph {
         }
         Set<Vertex> adjVert = new HashSet<Vertex>();
         v = vertexHash[v.hashCode()];
-        for (Edge e : adjMap.get(v)) {
+        for (Edge e : vertexEdges(v)) {
             Vertex adj = vertexHash[e.getDestination().hashCode()];
             adjVert.add(adj);
         }
@@ -125,7 +125,7 @@ public class MyGraph implements Graph {
         Vertex to = vertexHash[b.hashCode()];
 
         // Search each edge for desired destination.
-        for (Edge e : adjMap.get(from)) {
+        for (Edge e : vertexEdges(from)) {
             if (e.getDestination().equals(to)) {
                 return e.getWeight();
             }
@@ -168,13 +168,12 @@ public class MyGraph implements Graph {
 
                 // Ensure currentSource vertex reachable from original source
                 if (currentSource.getCost() != Integer.MAX_VALUE) {
-                    Vertex currentDestination = vertexHash[v.hashCode()];
-                    int cost = currentSource.getCost() + edgeCost(currentSource, currentDestination);
+                    int cost = currentSource.getCost() + edgeCost(currentSource, v);
                     if (cost < v.getCost()) { // Found a better route than was previously known
-                        currentDestination.setCost(cost);
-                        unvisitedVertices.remove(currentDestination);
-                        unvisitedVertices.add(currentDestination);
-                        currentDestination.setParent(currentSource);
+                        v.setCost(cost);
+                        unvisitedVertices.remove(v);
+                        unvisitedVertices.add(v);
+                        v.setParent(currentSource);
                     }
                 }
             }

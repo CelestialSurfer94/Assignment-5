@@ -41,8 +41,9 @@ public class FindPaths {
 			} else {
 				System.out.println("Shortest path from " + a.toString() + " to " + b.toString() + ":");
 				for (Vertex pathVert : p.vertices) {
-					System.out.println(pathVert.toString() + " ");
+					System.out.print(pathVert.toString() + " ");
 				}
+				System.out.println();
 				System.out.println(p.cost);
 			}
 			

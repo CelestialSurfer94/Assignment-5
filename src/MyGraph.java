@@ -7,7 +7,7 @@ import java.util.*;
  * @author Kalvin Suting
  */
 public class MyGraph implements Graph {
-    private static final int HASH_CONST = 4973; // Size of adj list
+    private static final int HASH_CONST = 1000000; // Size of adj list
     private Map<Vertex, Set<Edge>> adjMap;
     private Vertex[] vertexHash;
 
@@ -81,10 +81,10 @@ public class MyGraph implements Graph {
             throw new IllegalArgumentException();
         }
         Set<Vertex> adjVert = new HashSet<Vertex>();
-        Iterator<Edge> itr = adjMap.get(v).iterator(); //set of edges for vertex v.
+        Iterator<Edge> itr = adjMap.get(vertexHash[v.hashCode()]).iterator(); //set of edges for vertex v.
         while(itr.hasNext()) {
             Edge curEdge = itr.next();
-            adjVert.add(curEdge.getDestination()); // adds the destination nodes from vertex v, through currentSource edge.
+            adjVert.add(curEdge.getDestination());
         }
         return adjVert;
     }
@@ -111,11 +111,11 @@ public class MyGraph implements Graph {
         if(vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null){ // the vertices do not exist.
             throw new IllegalArgumentException("Vertices must be in the graph.");
         }
-        Set<Edge> edges = vertexEdges(a); //all of the edges for the vertex.
+        Set<Edge> edges = vertexEdges(vertexHash[a.hashCode()]); //all of the edges for the vertex.
         Iterator<Edge> itr = edges.iterator();
         while(itr.hasNext()){
             Edge curEdge = itr.next();
-            if(curEdge.getDestination() == b){ //if the destination is equal to b, found the correct edge return weight.
+            if(curEdge.getDestination().equals(vertexHash[b.hashCode()])){ //if the destination is equal to b, found the correct edge return weight.
                 return curEdge.getWeight();
             }
         }
@@ -137,27 +137,14 @@ public class MyGraph implements Graph {
         if (vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null) {
             throw new IllegalArgumentException("Node does not exist.");
         }
-        List<Vertex> path = new LinkedList<Vertex>();
-        Queue<Vertex> unvisitedVertices = new PriorityQueue<Vertex>();
-        a.setCost(0); // Distance to a is zero.
-        unvisitedVertices.addAll(vertices());
-        while (!unvisitedVertices.isEmpty()) { // There are still unvisited nodes.
-            Vertex currentSource = unvisitedVertices.remove();
-            path.add(currentSource);
-            for(Vertex v : adjacentVertices(currentSource)) {
+        Vertex source = vertexHash[a.hashCode()];
+        Vertex destination = vertexHash[b.hashCode()];
 
-                // Calculate cost to get from currentSource to each edge.
-                int cost = currentSource.getCost() + edgeCost(currentSource, v);
-                if (cost < v.getCost()) {  // A shorter path than previously known has been discovered.
-                    v.setCost(cost);
-                    unvisitedVertices.remove(v);
-                    unvisitedVertices.add(v);
-                    v.setParent(currentSource);
-                }
-            }
+        source.setCost(0);
+        Queue<Vertex> queue = new PriorityQueue<Vertex>();
+        for(Vertex v: vertices()){
+            queue.add(v);
         }
-        Path shortestPath = new Path(getPath(a,b), b.getCost());
-        return shortestPath;
     }
 
     private List getPath(Vertex a, Vertex b) {
@@ -167,7 +154,7 @@ public class MyGraph implements Graph {
             test.add(current);
             current = current.getParent();
         }
-        if (test.size() == 1 && a != b) {
+        if (test.size() == 1 && !a.equals(b)) {
             return null;
         }
         Collections.reverse(test);

@@ -36,9 +36,13 @@ public class FindPaths {
 			}
 			
 			//TODO YOUR CODE HERE: call shortestPath and print out the result
-			Path c = g.shortestPath(a,b);
-			System.out.println(c.toString());
-			
+			Path p = g.shortestPath(a,b);
+			System.out.println(p.vertices);
+			if(p.cost == Integer.MAX_VALUE){
+				System.out.println("Path not reachable, cost therefore infinity");
+			}else {
+				System.out.println(p.cost);
+			}
 		}
 	}
 

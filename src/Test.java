@@ -6,8 +6,8 @@ import java.util.*;
 public class Test {
     public static void main(String[] args) {
         Random r = new Random();
-        List<Vertex> vertices = new ArrayList<Vertex>();
-        Set<Edge> edges = new HashSet<Edge>();
+        Collection<Vertex> vertices = new ArrayList<Vertex>();
+        Collection<Edge> edges = new ArrayList<Edge>();
 
         Vertex a = new Vertex("A");
         Vertex b = new Vertex("B");
@@ -20,10 +20,10 @@ public class Test {
         Edge ad = new Edge(a, e, 1);
         Edge bc = new Edge(b, c, 1);
         Edge be = new Edge(b, e, 2);
-        //Edge cd = new Edge(b, f, 5);
+        Edge cd = new Edge(b, f, 5);
         Edge de = new Edge(d, e, 9);
-        //Edge ce = new Edge(e, f, 2);
-        //Edge cf = new Edge(c, f, 10);
+        Edge ce = new Edge(e, f, 10);
+        Edge cf = new Edge(c, f, 10);
         vertices.add(a);
         vertices.add(b);
         vertices.add(c);
@@ -35,14 +35,15 @@ public class Test {
         edges.add(ad);
         edges.add(bc);
         edges.add(be);
-       // edges.add(cd);
-        //edges.add(ce);
-       // edges.add(cf);
+        edges.add(cd);
+        edges.add(ce);
+        edges.add(cf);
         edges.add(de);
 
 
+
         MyGraph g = new MyGraph(vertices, edges);
-        Path p = g.shortestPath(a,e);
+        Path p = g.shortestPath(a,f);
         System.out.println(p.vertices);
         if(p.cost == Integer.MAX_VALUE){
             System.out.println("Path not reachable, cost therefore infinity");

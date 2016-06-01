@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 /**
- * Driver program that reads in a graph and prompts user for shortests paths in the graph.
+ * Driver program that reads in a graph and prompts user for shortest paths in the graph.
  * (Intentionally without comments.  Read through the code to understand what it does.)
  */
 
@@ -37,7 +37,7 @@ public class FindPaths {
 			
 			//TODO YOUR CODE HERE: call shortestPath and print out the result
 			Path c = g.shortestPath(a,b);
-			System.out.println(c);
+			System.out.println(c.toString());
 			
 		}
 	}

@@ -89,7 +89,12 @@ public class MyGraph implements Graph {
         return adjVert;
     }
 
-    public Set<Edge> vertexEdges(Vertex a){ //returns the set of edges for a given vertex.
+    /**
+     *
+     * @param a the vertex that this method will find edges for.
+     * @return returns the edges out of vertex a.
+     */
+    public Set<Edge> vertexEdges(Vertex a){
         return adjMap.get(a);
     }
 
@@ -119,7 +124,7 @@ public class MyGraph implements Graph {
 
     /**
      * Returns the shortest path from a to b in the graph, or null if there is
-     * no such path.  Assumes all edge weights are nonnegative.
+     * no such path.  Assumes all edge weights are non-negative.
      * Uses Dijkstra's algorithm.
      * @param a the starting vertex
      * @param b the destination vertex
@@ -128,113 +133,44 @@ public class MyGraph implements Graph {
      *   the path. Returns null if b is not reachable from a.
      * @throws IllegalArgumentException if a or b does not exist.
      */
-    public Path shortestPath(Vertex a, Vertex b) { //*****NEED TO IMPLEMENT THE INDEX FIELD OF THE VERTEX NOW.*****
+    public Path shortestPath(Vertex a, Vertex b) {
         if (vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null) {
             throw new IllegalArgumentException("Node does not exist.");
         }
         List<Vertex> path = new LinkedList<Vertex>();
-        minHeap queue = new minHeap();
-        a.setCost(0); // cost from start to end is zero.
-        int queueIndex = 1;
-        for(Vertex v: vertices()){
-            v.setIndex(queueIndex); //stores the index of the queue in the vertex.
-            queue.add(v); //add current vertex into the queue.
-            queueIndex++;
-        }
-        while (!queue.isEmpty()) { // There are still unvisited nodes.
-            Vertex currentSource = queue.remove();
+        Queue<Vertex> unvisitedVertices = new PriorityQueue<Vertex>();
+        a.setCost(0); // Distance to a is zero.
+        unvisitedVertices.addAll(vertices());
+        while (!unvisitedVertices.isEmpty()) { // There are still unvisited nodes.
+            Vertex currentSource = unvisitedVertices.remove();
+            path.add(currentSource);
             for(Vertex v : adjacentVertices(currentSource)) {
 
                 // Calculate cost to get from currentSource to each edge.
                 int cost = currentSource.getCost() + edgeCost(currentSource, v);
                 if (cost < v.getCost()) {  // A shorter path than previously known has been discovered.
                     v.setCost(cost);
-                    queue.decreaseKey(v, cost);
+                    unvisitedVertices.remove(v);
+                    unvisitedVertices.add(v);
                     v.setParent(currentSource);
                 }
             }
         }
-        System.out.println(b.getParent());
-        return new Path(getPath(a,b),b.getCost());
+        Path shortestPath = new Path(getPath(a,b), b.getCost());
+        return shortestPath;
     }
 
     private List getPath(Vertex a, Vertex b) {
-        List<Vertex> test = new LinkedList<Vertex>();
+        List<Vertex> test = new ArrayList<Vertex>();
         Vertex current = b;
-        while(current != null){
+        while (current != null) {
             test.add(current);
             current = current.getParent();
         }
-        System.out.println(test.toString());
+        if (test.size() == 1 && a != b) {
+            return null;
+        }
+        Collections.reverse(test);
         return test;
-    }
-
-    public class minHeap{
-        Vertex[] table;
-        int index;
-        public final int DEFAULT_SIZE = 3000;
-
-
-        public minHeap(){
-            table = new Vertex[DEFAULT_SIZE];
-            index = 0;
-        }
-
-        public void add(Vertex a){
-            index++;
-            int newIndex = percolateUp(index, a.getCost());
-            table[newIndex] = a;
-        }
-
-        public int percolateUp(int curIndex, int val){
-            while(curIndex > 1 && val < table[curIndex/2].getCost()){
-                table[curIndex] = table[curIndex/2];
-                curIndex /= 2;
-            }
-            return curIndex;
-        }
-
-        public Vertex remove(){
-            Vertex min = table[1];
-            int newIndex = percolateDown(1,table[index].getCost());
-            table[newIndex] = table[index];
-            index--;
-            return min;
-        }
-
-        public int percolateDown(int curIndex, int val){
-            while(2 * curIndex <= index){
-                int left = 2 * curIndex;
-                int right = left +1;
-                int newIndex = 0;
-                if(right > index || table[left].getCost() < table[right].getCost()){
-                    newIndex = left;
-                } else{
-                    newIndex = right;
-                    if(table[newIndex].getCost() < val){
-                        table[curIndex] = table[newIndex];
-                        curIndex = newIndex;
-                    } else {
-                        break;
-                    }
-                }
-            }
-            return curIndex;
-        }
-
-        public boolean isEmpty(){
-            return index == 0;
-        }
-
-        public void decreaseKey(Vertex a, int newCost){
-            int curIndex = a.getIndex();
-            int newIndex = percolateDown(curIndex, newCost); //could be a.getCost idk.
-            table[newIndex] = a;
-
-        }
-
-        public int getIndex(){
-            return this.index;
-        }
     }
 }

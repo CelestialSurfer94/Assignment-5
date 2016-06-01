@@ -5,12 +5,23 @@ import java.util.*;
  * Assumes that we do not have negative cost edges in the graph.
  * @author Evan Gordon
  * @author Kalvin Suting
+ *
+ * Last modified 5/31/2016
  */
 public class MyGraph implements Graph {
-    private static final int HASH_CONST = 9000000; // Size of adj list.
+    private static final int HASH_CONST = 6673; // Size of vertex hash.
     private Map<Vertex, Set<Edge>> adjMap; // Mapping of Vertices to their corresponding Edges.
     private Vertex[] vertexHash; // Hash table of all Vertices in graph.
 
+    /**
+     * A MyGraph object is instantiated.
+     * @param vertices The collection of vertices to add to the graph.
+     * @param edges The collection of edges between the vertices of the graph.
+     * @throws IllegalArgumentException If passed a non-existent or negatively weighted edge.
+     *         Also throws if a redundant edge is passed in, provided the redundant edge has a
+     *         different weight from the one already in the graph. Does not throw if redundant
+     *         edge with same weight is passed.
+     */
     public MyGraph(Collection<Vertex> vertices, Collection<Edge> edges) {
         adjMap = new HashMap<Vertex, Set<Edge>>();
         vertexHash = new Vertex[HASH_CONST];
@@ -139,6 +150,8 @@ public class MyGraph implements Graph {
         if (vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null) {
             throw new IllegalArgumentException("Node does not exist.");
         }
+
+        // Initialize each vertex's cost to infinity and parent vertex to null
         for (Vertex v : vertices()) {
             v.setCost(Integer.MAX_VALUE);
             v.setParent(null);
@@ -147,19 +160,21 @@ public class MyGraph implements Graph {
         currentSource.setCost(0);
         Queue<Vertex> unvisitedVertices = new PriorityQueue<Vertex>();
         unvisitedVertices.addAll(vertices());
-
         while(!unvisitedVertices.isEmpty()) {
-            currentSource = unvisitedVertices.remove();
+            currentSource = unvisitedVertices.remove(); // Get lowest cost adjacent vertex
 
             // Examine each adjacent vertex's cost.
             for (Vertex v : adjacentVertices(currentSource)) {
+
+                // Ensure currentSource vertex reachable from original source
                 if (currentSource.getCost() != Integer.MAX_VALUE) {
-                    int cost = currentSource.getCost() + edgeCost(currentSource, vertexHash[v.hashCode()]);
+                    Vertex currentDestination = vertexHash[v.hashCode()];
+                    int cost = currentSource.getCost() + edgeCost(currentSource, currentDestination);
                     if (cost < v.getCost()) { // Found a better route than was previously known
-                        vertexHash[v.hashCode()].setCost(cost);
-                        unvisitedVertices.remove(vertexHash[v.hashCode()]);
-                        unvisitedVertices.add(vertexHash[v.hashCode()]);
-                        vertexHash[v.hashCode()].setParent(currentSource);
+                        currentDestination.setCost(cost);
+                        unvisitedVertices.remove(currentDestination);
+                        unvisitedVertices.add(currentDestination);
+                        currentDestination.setParent(currentSource);
                     }
                 }
             }
@@ -174,5 +189,4 @@ public class MyGraph implements Graph {
         }
         return new Path(path, vertexHash[b.hashCode()].getCost());
     }
-
 }

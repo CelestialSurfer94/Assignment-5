@@ -15,28 +15,30 @@ public class Test {
         Vertex d = new Vertex("D");
         Vertex e = new Vertex("E");
         Vertex f = new Vertex("F");
-        Edge ab = new Edge(a, b, 2);
-        Edge ad = new Edge(a, d, 1);
-        Edge ae = new Edge(a, e, 3);
-        Edge bc = new Edge(b, c, 1);
-        Edge be = new Edge(b, e, 0);
-        Edge cd = new Edge(c, d, 5);
-        Edge ef = new Edge(e, f, 10);
-        Edge cf = new Edge(c, f, 10);
+
+        Edge ab = new Edge(a, b, 5);
+        Edge ae = new Edge(a, e, 1000);
+        Edge bd = new Edge(b, d, 0);
+        Edge de = new Edge(d, e, 54);
+        Edge ec = new Edge(e, c, 12);
+        Edge cf = new Edge(c, f, 35);
+        Edge ea = new Edge(e, a, 512);
+        Edge fa = new Edge(f, a, 10);
+        edges.add(ab);
+        edges.add(ae);
+        edges.add(bd);
+        edges.add(de);
+        edges.add(ec);
+        edges.add(cf);
+        edges.add(ea);
+        edges.add(fa);
         vertices.add(a);
         vertices.add(b);
         vertices.add(c);
         vertices.add(d);
         vertices.add(e);
         vertices.add(f);
-        edges.add(ab);
-        edges.add(ad);
-        edges.add(ad);
-        edges.add(bc);
-        edges.add(be);
-        edges.add(cd);
-        edges.add(ef);
-        edges.add(cf);
+
 
         Scanner console = new Scanner(System.in);
 

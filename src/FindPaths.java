@@ -34,12 +34,17 @@ public class FindPaths {
 				System.out.println("no such vertex");
 				System.exit(1);
 			}
-			
-			//TODO YOUR CODE HERE: call shortestPath and print out the result
 
 			Path p = g.shortestPath(a, b);
-			System.out.println(p.vertices.toString());
-			System.out.println(p.cost);
+			if (p.cost == Integer.MAX_VALUE) {
+				System.out.println("does not exist");
+			} else {
+				System.out.println("Shortest path from " + a.toString() + " to " + b.toString() + ":");
+				for (Vertex pathVert : p.vertices) {
+					System.out.println(pathVert.toString() + " ");
+				}
+				System.out.println(p.cost);
+			}
 			
 		}
 	}

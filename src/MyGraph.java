@@ -80,10 +80,10 @@ public class MyGraph implements Graph {
             throw new IllegalArgumentException();
         }
         Set<Vertex> adjVert = new HashSet<Vertex>();
-        Iterator<Edge> itr = adjMap.get(vertexHash[v.hashCode()]).iterator(); //set of edges for vertex v.
-        while(itr.hasNext()) {
-            Edge curEdge = itr.next();
-            adjVert.add(vertexHash[curEdge.getDestination().hashCode()]); // adds the destination nodes from vertex v, through currentSource edge.
+        v = vertexHash[v.hashCode()];
+        for (Edge e : adjMap.get(v)) {
+            Vertex adj = vertexHash[e.getDestination().hashCode()];
+            adjVert.add(adj);
         }
         return adjVert;
     }
@@ -115,7 +115,7 @@ public class MyGraph implements Graph {
 
         // Search each edge for desired destination.
         for (Edge e : adjMap.get(from)) {
-            if (e.getSource().equals(to)) {
+            if (e.getDestination().equals(to)) {
                 return e.getWeight();
             }
         }
@@ -139,7 +139,40 @@ public class MyGraph implements Graph {
         if (vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null) {
             throw new IllegalArgumentException("Node does not exist.");
         }
+        for (Vertex v : vertices()) {
+            v.setCost(Integer.MAX_VALUE);
+            v.setParent(null);
+        }
+        Vertex currentSource = vertexHash[a.hashCode()];
+        currentSource.setCost(0);
+        Queue<Vertex> unvisitedVertices = new PriorityQueue<Vertex>();
+        unvisitedVertices.addAll(vertices());
 
+        while(!unvisitedVertices.isEmpty()) {
+            currentSource = unvisitedVertices.remove();
+
+            // Examine each adjacent vertex's cost.
+            for (Vertex v : adjacentVertices(currentSource)) {
+                if (currentSource.getCost() != Integer.MAX_VALUE) {
+                    int cost = currentSource.getCost() + edgeCost(currentSource, vertexHash[v.hashCode()]);
+                    if (cost < v.getCost()) { // Found a better route than was previously known
+                        vertexHash[v.hashCode()].setCost(cost);
+                        unvisitedVertices.remove(vertexHash[v.hashCode()]);
+                        unvisitedVertices.add(vertexHash[v.hashCode()]);
+                        vertexHash[v.hashCode()].setParent(currentSource);
+                    }
+                }
+            }
+        }
+
+        // Costs have been discovered; Find shortest path now.
+        List<Vertex> path = new LinkedList<Vertex>();
+        Vertex currentChild = vertexHash[b.hashCode()];
+        while (currentChild != null) {
+            path.add(0, currentChild);
+            currentChild = currentChild.getParent();
+        }
+        return new Path(path, vertexHash[b.hashCode()].getCost());
     }
 
 }

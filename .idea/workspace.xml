@@ -2,18 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f931751e-1e5c-46f2-8ace-6c277e62e73e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MinimumSpanningTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment 5 373/Edge.class" afterPath="$PROJECT_DIR$/out/production/Assignment 5 373/Edge.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment 5 373/FindPaths.class" afterPath="$PROJECT_DIR$/out/production/Assignment 5 373/FindPaths.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment 5 373/MyGraph.class" afterPath="$PROJECT_DIR$/out/production/Assignment 5 373/MyGraph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment 5 373/Test.class" afterPath="$PROJECT_DIR$/out/production/Assignment 5 373/Test.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Assignment 5 373/Vertex.class" afterPath="$PROJECT_DIR$/out/production/Assignment 5 373/Vertex.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Edge.java" afterPath="$PROJECT_DIR$/src/Edge.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FindPaths.java" afterPath="$PROJECT_DIR$/src/FindPaths.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyGraph.java" afterPath="$PROJECT_DIR$/src/MyGraph.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Test.java" afterPath="$PROJECT_DIR$/src/Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Vertex.java" afterPath="$PROJECT_DIR$/src/Vertex.java" />
     </list>
     <ignored path="Assignment 5 373.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +42,8 @@
       <file leaf-file-name="MyGraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MyGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4">
-              <caret line="205" column="29" selection-start-line="205" selection-start-column="29" selection-end-line="205" selection-end-column="29" />
+            <state relative-caret-position="7062">
+              <caret line="214" column="1" selection-start-line="214" selection-start-column="1" selection-end-line="214" selection-end-column="1" />
               <folding>
                 <element signature="e#2809#2810#0" expanded="true" />
                 <element signature="e#2847#2848#0" expanded="true" />
@@ -81,10 +70,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MinimumSpanningTree.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MinimumSpanningTree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/MinimumSpanningTree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="-1060">
               <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -128,11 +117,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Edge.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Edge.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Edge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1720">
-              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+            <state relative-caret-position="2937">
+              <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
               <folding>
                 <element signature="e#574#575#0" expanded="true" />
                 <element signature="e#592#593#0" expanded="true" />
@@ -173,9 +162,9 @@
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/FindPaths.java" />
         <option value="$PROJECT_DIR$/src/MinimumSpanningTree.java" />
-        <option value="$PROJECT_DIR$/src/MyGraph.java" />
         <option value="$PROJECT_DIR$/src/Edge.java" />
         <option value="$PROJECT_DIR$/src/Vertex.java" />
+        <option value="$PROJECT_DIR$/src/MyGraph.java" />
       </list>
     </option>
   </component>
@@ -271,7 +260,7 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="MinimumSpanningTree" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="TEST-vertex.txt TEST-edge.txt" />
+      <option name="PROGRAM_PARAMETERS" value="connected-undirected-vertex.txt connected-undirected-edges.txt" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -754,12 +743,12 @@
       <workItem from="1464933676803" duration="21000" />
       <workItem from="1464986545424" duration="2392000" />
       <workItem from="1464990315588" duration="1011000" />
-      <workItem from="1465004149157" duration="5609000" />
+      <workItem from="1465004149157" duration="6016000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90641000" />
+    <option name="totallyTimeSpent" value="91048000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-13" y="-13" width="2762" height="1790" extended-state="6" />
@@ -1355,10 +1344,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1353">
+          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="205" column="29" selection-start-line="205" selection-start-column="29" selection-end-line="205" selection-end-column="29" />
+        <state relative-caret-position="7062">
+          <caret line="214" column="1" selection-start-line="214" selection-start-column="1" selection-end-line="214" selection-end-column="1" />
           <folding>
             <element signature="e#2809#2810#0" expanded="true" />
             <element signature="e#2847#2848#0" expanded="true" />
@@ -1374,21 +1371,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/Edge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1353">
-          <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
-          <folding />
+        <state relative-caret-position="2937">
+          <caret line="89" column="1" selection-start-line="89" selection-start-column="1" selection-end-line="89" selection-end-column="1" />
+          <folding>
+            <element signature="e#574#575#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#727#728#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#853#854#0" expanded="true" />
+            <element signature="e#868#869#0" expanded="true" />
+            <element signature="e#1002#1003#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1866#1867#0" expanded="true" />
+            <element signature="e#1896#1897#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MinimumSpanningTree.java">
+    <entry file="file://$PROJECT_DIR$/src/Path.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="396">
+          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1415,29 +1421,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Path.java">
+    <entry file="file://$PROJECT_DIR$/src/MinimumSpanningTree.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1720">
-          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+        <state relative-caret-position="-1060">
+          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="2" />
           <folding>
-            <element signature="e#574#575#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#1002#1003#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-            <element signature="e#1866#1867#0" expanded="true" />
-            <element signature="e#1896#1897#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

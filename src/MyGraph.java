@@ -5,30 +5,40 @@ import java.util.*;
  * Assumes that we do not have negative cost edges in the graph.
  * @author Evan Gordon
  * @author Kalvin Suting
+ *
+ * Last modified 5/31/2016
  */
 public class MyGraph implements Graph {
-    private static final int HASH_CONST = 1000000; // Size of adj list
-    private Map<Vertex, Set<Edge>> adjMap;
-    private Vertex[] vertexHash;
+    private static final int HASH_CONST = 90001; // Size of vertex hash.
+    private Map<Vertex, Set<Edge>> adjMap; // Mapping of Vertices to their corresponding Edges.
+    private Vertex[] vertexHash; // Hash table of all Vertices in graph.
 
+    /**
+     * A MyGraph object is instantiated.
+     * @param vertices The collection of vertices to add to the graph.
+     * @param edges The collection of edges between the vertices of the graph.
+     * @throws IllegalArgumentException If passed a non-existent or negatively weighted edge.
+     *         Also throws if a redundant edge is passed in, provided the redundant edge has a
+     *         different weight from the one already in the graph. Does not throw if redundant
+     *         edge with same weight is passed.
+     */
     public MyGraph(Collection<Vertex> vertices, Collection<Edge> edges) {
         adjMap = new HashMap<Vertex, Set<Edge>>();
         vertexHash = new Vertex[HASH_CONST];
 
-        // Hash each vertex parameter and add to adjMap
+        // Hash each vertex parameter and add to adjMap.
         for (Vertex v : vertices) {
-            adjMap.put(v, new HashSet<Edge>());
             vertexHash[v.hashCode()] = v;
+            adjMap.put(v, new HashSet<Edge>());
         }
 
-        // Check each possible edge for exceptions
+        // Check each possible edge for exceptions.
         for (Edge possibleEdge : edges) {
-            Vertex from = possibleEdge.getSource();
-            Vertex to = possibleEdge.getDestination();
+            Vertex from = vertexHash[possibleEdge.getSource().hashCode()];
+            Vertex to = vertexHash[possibleEdge.getDestination().hashCode()];
 
-            // Ensure destination and source vertices are in graph and weight is not negative
-            if (vertexHash[from.hashCode()] == null || vertexHash[to.hashCode()] == null ||
-                    possibleEdge.getWeight() < 0) {
+            // Ensure destination and source vertices are in graph and weight is not negative.
+            if (to == null || from == null || possibleEdge.getWeight() < 0) {
                 throw new IllegalArgumentException("Invalid edge detected.");
             }
 
@@ -43,7 +53,7 @@ public class MyGraph implements Graph {
                 }
             }
 
-            // Edge passed all checks; add to adjMap
+            // Edge passed all checks; add to adjMap.
             adjMap.get(from).add(possibleEdge);
         }
     }
@@ -81,10 +91,10 @@ public class MyGraph implements Graph {
             throw new IllegalArgumentException();
         }
         Set<Vertex> adjVert = new HashSet<Vertex>();
-        Iterator<Edge> itr = adjMap.get(vertexHash[v.hashCode()]).iterator(); //set of edges for vertex v.
-        while(itr.hasNext()) {
-            Edge curEdge = itr.next();
-            adjVert.add(curEdge.getDestination());
+        v = vertexHash[v.hashCode()];
+        for (Edge e : vertexEdges(v)) {
+            Vertex adj = vertexHash[e.getDestination().hashCode()];
+            adjVert.add(adj);
         }
         return adjVert;
     }
@@ -95,7 +105,7 @@ public class MyGraph implements Graph {
      * @return returns the edges out of vertex a.
      */
     public Set<Edge> vertexEdges(Vertex a){
-        return adjMap.get(a);
+        return adjMap.get(vertexHash[a.hashCode()]);
     }
 
     /**
@@ -108,18 +118,21 @@ public class MyGraph implements Graph {
      * @throws IllegalArgumentException if a or b do not exist.
      */
     public int edgeCost(Vertex a, Vertex b) {
-        if(vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null){ // the vertices do not exist.
+        if(vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null){
             throw new IllegalArgumentException("Vertices must be in the graph.");
         }
-        Set<Edge> edges = vertexEdges(vertexHash[a.hashCode()]); //all of the edges for the vertex.
-        Iterator<Edge> itr = edges.iterator();
-        while(itr.hasNext()){
-            Edge curEdge = itr.next();
-            if(curEdge.getDestination().equals(vertexHash[b.hashCode()])){ //if the destination is equal to b, found the correct edge return weight.
-                return curEdge.getWeight();
+        Vertex from = vertexHash[a.hashCode()];
+        Vertex to = vertexHash[b.hashCode()];
+
+        // Search each edge for desired destination.
+        for (Edge e : vertexEdges(from)) {
+            if (e.getDestination().equals(to)) {
+                return e.getWeight();
             }
         }
-        return -1; //edge from a to b does not exist.
+
+        // Desired destination not adjacent to desired source.
+        return -1;
     }
 
     /**
@@ -137,27 +150,81 @@ public class MyGraph implements Graph {
         if (vertexHash[a.hashCode()] == null || vertexHash[b.hashCode()] == null) {
             throw new IllegalArgumentException("Node does not exist.");
         }
-        Vertex source = vertexHash[a.hashCode()];
-        Vertex destination = vertexHash[b.hashCode()];
 
-        source.setCost(0);
-        Queue<Vertex> queue = new PriorityQueue<Vertex>();
-        for(Vertex v: vertices()){
-            queue.add(v);
+        // Initialize each vertex's cost to infinity and parent vertex to null
+        for (Vertex v : vertices()) {
+            v.setCost(Integer.MAX_VALUE);
+            v.setParent(null);
         }
+        Vertex currentSource = vertexHash[a.hashCode()];
+        currentSource.setCost(0);
+        Queue<Vertex> unvisitedVertices = new PriorityQueue<Vertex>();
+        unvisitedVertices.addAll(vertices());
+        while(!unvisitedVertices.isEmpty()) {
+            currentSource = unvisitedVertices.remove(); // Get lowest cost adjacent vertex
+
+            // Examine each adjacent vertex's cost.
+            for (Vertex v : adjacentVertices(currentSource)) {
+
+                // Ensure currentSource vertex reachable from original source
+                if (currentSource.getCost() != Integer.MAX_VALUE) {
+                    int cost = currentSource.getCost() + edgeCost(currentSource, v);
+                    if (cost < v.getCost()) { // Found a better route than was previously known
+                        v.setCost(cost);
+                        unvisitedVertices.remove(v);
+                        unvisitedVertices.add(v);
+                        v.setParent(currentSource);
+                    }
+                }
+            }
+        }
+
+        // Costs have been discovered; Find shortest path now.
+        List<Vertex> path = new LinkedList<Vertex>();
+        Vertex currentChild = vertexHash[b.hashCode()];
+        while (currentChild != null) {
+            path.add(0, currentChild);
+            currentChild = currentChild.getParent();
+        }
+        return new Path(path, vertexHash[b.hashCode()].getCost());
     }
 
-    private List getPath(Vertex a, Vertex b) {
-        List<Vertex> test = new ArrayList<Vertex>();
-        Vertex current = b;
-        while (current != null) {
-            test.add(current);
-            current = current.getParent();
+    public Set<Edge> minSpanTree(){
+        SortedSet<Edge> sortedEdges = new TreeSet<Edge>();
+        Set<Vertex> unvisitedVertices = new HashSet<Vertex>();
+        Set<Edge> minEdges = new TreeSet<>();
+        unvisitedVertices.addAll(vertices());
+        sortedEdges.addAll(edges());
+        while(!unvisitedVertices.isEmpty()){
+            for(Edge e : sortedEdges){
+                Vertex source = e.getSource();
+                Vertex destination = e.getDestination();
+                if(unvisitedVertices.contains(source)){
+                    minEdges.add(e);
+                    unvisitedVertices.remove(source);
+                }
+                if(unvisitedVertices.contains(destination)){
+                    minEdges.add(e);
+                    unvisitedVertices.remove(destination);
+                }
+            }
+
         }
-        if (test.size() == 1 && !a.equals(b)) {
-            return null;
-        }
-        Collections.reverse(test);
-        return test;
+        return minEdges;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -2,7 +2,7 @@ import java.util.*;
 import java.io.*;
 
 /**
- * Driver program that reads in a graph and prompts user for shortest paths in the graph.
+ * Driver program that reads in a graph and prompts user for shortests paths in the graph.
  * (Intentionally without comments.  Read through the code to understand what it does.)
  */
 
@@ -27,22 +27,26 @@ public class FindPaths {
 				System.out.println("no such vertex");
 				System.exit(0);
 			}
-			
+
 			System.out.print("Destination vertex? ");
 			Vertex b = new Vertex(console.nextLine());
 			if(!v.contains(b)) {
 				System.out.println("no such vertex");
 				System.exit(1);
 			}
-			
-			//TODO YOUR CODE HERE: call shortestPath and print out the result
-			Path p = g.shortestPath(a,b);
-			System.out.println(p.vertices);
-			if(p.cost == Integer.MAX_VALUE){
-				System.out.println("Path not reachable, cost therefore infinity");
-			}else {
+
+			Path p = g.shortestPath(a, b);
+			if (p.cost == Integer.MAX_VALUE) {
+				System.out.println("does not exist");
+			} else {
+				System.out.println("Shortest path from " + a.toString() + " to " + b.toString() + ":");
+				for (Vertex pathVert : p.vertices) {
+					System.out.print(pathVert.toString() + " ");
+				}
+				System.out.println();
 				System.out.println(p.cost);
 			}
+
 		}
 	}
 
@@ -78,6 +82,7 @@ public class FindPaths {
 				System.exit(3);
 			}
 		}
+
 		return new MyGraph(v,e);
 	}
 }

@@ -15,10 +15,9 @@ public class Vertex implements Comparable<Vertex>{
         if(label == null)
             throw new IllegalArgumentException("null");
         this.label = label;
-        this.cost = Integer.MAX_VALUE;
+        this.cost = -1;
         this.index = 1;
     }
-
 
     /**
      * Get a vertex label
@@ -67,9 +66,11 @@ public class Vertex implements Comparable<Vertex>{
     public void setIndex(int newIndex){
         this.index = newIndex;
     }
+
     public int getIndex(){
         return this.index;
     }
+
     public int compareTo(Vertex other){
         return this.cost - other.cost;
     }

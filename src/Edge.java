@@ -2,7 +2,7 @@
  * Representation of a directed graph edge.
  */
 
-public class Edge {
+public class Edge implements Comparable<Edge> {
 	private final Vertex from,to;
 	private final int w;
 
@@ -84,7 +84,7 @@ public class Edge {
 		return w==other.w;
 	}
 
-	public boolean checkWeights(Edge other){
-		return this.w == other.w;
+	public int compareTo(Edge other){
+		return this.w - other.w;
 	}
 }
